@@ -1,0 +1,1563 @@
+
+
+📖SQLD. 제 30 회 기출 문제
+
+
+문제 1. 아래 내용의 특징은 무엇을 설명하고 있는지 고르시오.
+정답확인🌼
+
+
+
+[ 설명 ] 엔터티 내에서 속성에 대한 데이터 타입과 크기 그리고 제약사항을 지정하는 것
+
+
+
+
+
+
+
+1) 제약조건2) 도메인3) 정규화4) 식별자
+
+
+
+
+ 
+
+문제 2. 아래의 반정규화에 대한 설명 중 부적절한 것은?
+정답확인🌼
+
+
+
+
+1) 데이터를 조회할 때 디스크 I/O 량이 많아서 성능이 저하되거나 경로가 너무 멀어 조인으로 인한 성능저하가 예상될 때 수행한다.2) 컬럼을 계산하여 읽을 때 성능이 저하될 것이 예상되는 경우 수행한다.3) 반정규화를 적용할 때는 기본적으로 데이터 무결성이 깨질 가능성이 많이 있으므로 반드시 데이터 무결성을 보장할 수 있는 방법을 고려해야한다.4) 반정규화 전에 테이블 추가(통계 테이블, 중복 테이블, 이력 테이블 추가)를 통해 반정규화를 회피한다.
+
+
+
+
+ 
+
+문제 3. 발생시점에 따른 엔터티 분류에 의한 중심 엔터티가 아닌 것은?
+정답확인🌼
+
+
+
+
+1) 매출2) 계약3) 사원4) 주문
+
+
+
+
+
+문제 4. 발생시점에 따른 엔터티 분류에 대해서 아래의 내용 중 잘못 짝지워진 것은?
+정답확인🌼
+
+
+
+
+A : 기본/키 엔터티 : 조직, 사원B : 기본/키 엔터티 : 부서C : 중심 엔터티 : 상품, 주문상품D : 행위 엔터티 : 주문내역, 계약진행
+
+
+
+
+
+
+
+
+1) A2) B3) C4) D
+
+
+
+
+ 
+
+문제 5. 데이터 모델링이 최종적으로 완료된 상태라고 정의할 수 있는, 즉 물리적인 스키마 설계를 하기 전 단계를 가리키는 말은 무엇인가?
+정답확인🌼
+
+
+
+
+1) 개괄적 모델링2) 개념적 모델링3) 논리적 모델링4) 물리적 모델링
+
+
+
+
+ 
+
+문제 6. 아래의 ERD 에 대한 설명중 가장 부적절한 것을 고르시오
+정답확인🌼
+
+
+
+
+1) SQL 작성 시 B 를 제외할 경우 A 와 C 는 카테시안 조인이 된다.2) 3개 테이블을 모두 조인할 경우 조인 최소 조건은 3개이다.3) B, C에서 C의 데이터는 모두 B에 존재하므로 Outer Join 을 안해도 된다.4) B는 A의 데이터를 모두 포함하지 않는다.
+
+
+
+
+ 
+
+문제 7. 아래의 설명 중 반정규화 대상이 아닌 것은?
+정답확인🌼
+
+
+
+
+1) 자주 사용되는 테이블에 접근하는 프로세스의 수가 많고 항상 일정한 범위만을 조회하는 경우2) 테이블의 대량의 데이터가 있고 대량의 데이터 범위를 자주 처리하는 경우에 처리범위를 일정하게 줄이지 않으면 성능을 보장할 수 없을 경우3) 통계성 프로세스에 의해 통계 정보를 필요로 할 때 별도의 통계 테이블을 생성해야 하는 경우4) 테이블에 지나치게 많은 조인과 Sorting, Order by 프로세스가 많은 경우
+
+
+
+
+ 
+
+문제 8. 아래의 식별자의 분류체계에 대한 설명 중 가장 부적절한 것은?
+정답확인🌼
+
+
+
+
+1) 대표성 여부에 따라 분류되는 주식별자와 보조식별자에서 주식별자는 대표성을 가지지 못해 참조관계 연결을 못한다.2) 스스로 생성여부에 따라 분류되는 식별자는 내부 식별자와 외부 식별자이다.3) 둘 이상의 속성으로 구성된 식별자를 복합식별자라 하며 속성의 수에 따른 식별자 분류이다.4) 업무적으로 만들어지지는 않지만 필요에 따라 인위적으로 만든 식별자를 인조 식별자라 한다.
+
+
+
+
+ 
+
+문제 9. 분산 데이터베이스의 특징 중 사용하려는 데이터의 저장 장소 명시가 불필요하다는 특징은 무엇인가?
+정답확인🌼
+
+
+
+
+1) 분할 투명성2) 위치 투명성3) 지역사상 투명성4) 중복 투명성
+
+
+
+
+ 
+
+문제 10. Row migration과 Row Chaining 에 대한 아래의 설명 중 바른 것은?
+정답확인🌼
+
+
+
+
+1) Row Chaining 과 Row Migration 이 많아지게 되더라도 성능 저하는 일어나지 않는다.2) 로우 길이가 너무 길어서 데이터 블록 하나에 데이터가 모두 저장되지 않고 두 개 이상의 블록에 걸쳐 하나의 로우가 저장되는 현상을 Row Chaining 이라고 한다.3) Row Migration 은 신규 데이터의 입력이 발생할 때 발생되는 현상이다.4) Row Chaining 과 Row Migration 이 발생되면 디스크 I/O 가 발생 될 때 I/O가 많아지게 되어 성능이 향상될 수 있다.
+
+
+
+
+ 
+
+문제 11. 아래의 ERD를 참고하여 보기의 SQL중 오류가 날 수 있는 SQL을 고르시오
+정답확인🌼
+
+SQLD_30_11_01           SQLD_30_11_02
+COL1 VARCHAR2(30)       COL1 VARCHAR2(30)
+COL2 NUMBER             COL3 VARCHAR2(30)
+                        COL4 NUMBER
+
+📝Memo 
+
+
+
+1)
+
+
+SELECT A.COL1, A.COL2FROM SQLD_30_11_01 AWHERE A.COL1 > 0;
+
+
+
+2)
+
+
+SELECT A.COL1, B.COL4 FROM SQLD_30_11_01 A       INNER JOIN SQLD_30_11_02 B               ON (A.COL1 = B.COL1)WHERE B.COL3 > 'X';
+
+
+
+
+
+3)
+
+
+SELECT COUNT(*)FROM SQLD_30_11_01 A. WHERE EXISTS (SELECT 'X'                FROM SQLD_30_11_02 B                WHERE A.COL2 = B.COL4);
+
+
+
+4)
+
+
+SELECT SUM(A.COL2) FROM SQLD_30_11_01 A      INNER JOIN SQLD_30_11_02 B                  ON (A.COL1 = B.COL1)WHERE B.COL4 > '1';
+
+
+
+
+
+
+ 
+
+문제 12. 아래의 ERD 를 참고하여 보기의 SQL 중 오류가 날 수 있는 SQL 을 고르시오
+정답확인🌼
+📝Memo 
+
+
+
+1)
+
+
+SELECT A.COL1,            (SELECT COL3 FROM SQLD_30_12_02 B             WHERE A.COL1 = B.COL1) AS B_COL3FROM SQLD_30_12_01 A WHERE A.COL2 > 10;
+
+
+
+2)
+
+
+SELECT A.COL1,            (SELECT COL5 FROM SQLD_30_12_03 B             WHERE A.COL4 = B.COL4) AS B_COL3FROM SQLD_30_12_02 A WHERE A.COL4 > 0;
+
+
+
+
+
+3)
+
+
+SELECT A.COL1, B.COL3 FROM SQLD_30_12_01 A             INNER JOIN SQLD_30_12_02 B                          ON (A.COL1 = B.COL1)             INNER JOIN SQLD_30_12_03 C                          ON (B.COL4 = C.COL4)WHERE C.COL4 > 5 AND A.COL2 > 10;
+
+
+
+4)
+
+
+SELECT A.COL1, B.COL3 FROM SQLD_30_12_01 A            INNER JOIN SQLD_30_12_02 B                   ON (A.COL1 = B.COL1)WHERE EXISTS (SELECT 'X'                  FROM SQLD_30_12_03 C                  WHERE B.COL4 = C.COL4);
+
+
+
+
+
+
+ 
+
+문제 13. 아래의 SQL 결과를 보고 Group by 뒤 빈칸에 들어가는 내용을 고르시오
+정답확인🌼
+SELECT JOB_ID, MANAGER_ID, SUM(SALARY)
+FROM HR.EMPLOYEES
+WHERE JOB_ID IN('SH_CLERK','ST_CLERK','SA_REP')
+GROUP BY (     );
+📝Memo 
+
+
+
+1) ROLLUP (JOB_ID, MANAGER_ID)2) CUBE(JOB_ID, MANAGER_ID)3) GROUPING SET(JOB_ID, MANAGER_ID)4) ROLLUP (MANAGER_ID, JOB_ID)
+
+
+
+ 
+
+문제 14. 아래의 SQL 결과로 올바른 것은?
+정답확인🌼
+SQLD_30_14_01
+COL1 VARCHAR2(30)
+COL2 NUMBER
+
+SQLD_30_14_01
+COL1      COL2
+--------------
+Y          20
+X          30
+A          40
+A          50
+
+
+SQL>
+SELECT COUNT(*)
+FROM SQLD_30_14_01
+WHERE (COL1, COL2) IN (('A',50));
+📝Memo 
+
+
+
+1) 02) 13) 24) 3
+
+
+
+ 
+
+문제 15. 아래의 데이터를 가진 테이블에서 아래와 같은 SQL 이 수행되었을때의 결과는?
+정답확인🌼
+SQLD_30_15_01
+COL1 VARCHAR2(30)
+COL2 NUMBER
+
+SQLD_30_15_01
+COL1      COL2
+--------------
+Y          20
+X          30
+A          40
+A          50
+           10
+           80
+           
+SQL>
+SELECT SUM(COL2)
+FROM SQLD_30_15_01
+WHERE COL1 IN ('A','X',NULL);
+📝Memo 
+
+
+
+
+1) 2102) 1203) 2304) 90
+
+
+
+
+ 
+
+문제 16. 아래의 실행계획에 대한 SQL 수행 순서를 올바르게 적은 것은?
+정답확인🌼
+[보기]
+0- SELECT ..
+1-  NESTED LOOP JOIN
+2-   NESTED LOOP JOIN
+3-     TABLE ACCESS (FULL)
+4-     TABLE ACCESS (BY INDEX ROWID)
+5-        INDEX (RANGE SCAN)
+6-   TABLE ACCESS (BY INDEX ROWID)
+7-     INDEX (RANGE SCAN)
+📝Memo 
+
+
+
+1) 3-5-4-2-7-6-1-02) 5-3-4-2-7-6-1-03) 3-4-5-2-7-6-1-04) 3-5-4-2-6-7-1-0
+
+
+
+
+ 
+
+문제 17. 아래 SQL 의 수행결과로 올바른 것은?
+정답확인🌼
+SQLD_30_17_01
+COL1 VARCHAR2(30)
+COL2 NUMBER
+
+
+SQLD_30_17_01
+COL1    COL2
+------------
+Y        20
+X        30
+A        40
+A        50
+         10
+         80
+         
+SQL>
+SELECT NVL(COUNT(*), 9999)
+FROM SQLD_30_17_01
+WHERE 1=2;
+📝Memo 
+
+
+
+
+1) 02) 99993) 14) ERROR
+
+
+
+
+ 
+
+문제 18. 아래 데이터를 참고하여 아래 SQL의 수행결과로 올바른 것은?
+정답확인🌼
+SQLD_30_18_01
+COL1 VARCHAR2(30)
+COL2 NUMBER
+
+
+SQLD_30_18_01
+COL1       COL2
+---------------
+1          100
+1          NULL
+2          100
+2          200
+
+
+SQL>
+SELECT COL1, SUM(COL2)
+FROM SQLD_30_18_1
+GROUP BY COL1;
+📝Memo 
+
+
+
+
+1)COL112
+SUM(COL2)NULL300
+2)COL112
+SUM(COL2)100300
+
+
+3)COL12
+SUM(COL2)300
+4)COL1112
+SUM(COL2)100NULL300
+
+
+
+
+ 
+
+문제 19. 아래와 같은 SQL 이 순서대로 수행되었을 때 최종 결과값으로 알맞은 것은?
+정답확인🌼
+SQLD_30_19
+COL1 NUMBER
+
+[SQL]
+1) INSERT INTO SQLD_30_19 VALUES(1);
+2) INSERT INTO SQLD_30_19 VALUES(2);
+3) SAVEPOINT SV1;
+4) UPDATE SQLD_30_19 SET COL1=4 WHERE COL1=2;
+5) SAVEPOINT SV1;
+6) DELETE SQLD_30_19 WHERE COL1 >= 2;
+7) ROLLBACK TO SV1;
+8) INSERT INTO SQLD_30_19 VALUES(3);
+9) SELECT MAX(COL1) FROM SQLD_30_19;
+📝Memo 
+
+
+
+1) 12) 23) 34) 4
+
+
+
+ 
+
+문제 20. 아래의 Trigger 에 대한 설명 중 가장 부적절한 것은 ? ***
+정답확인🌼
+ 
+
+
+
+1) DELETE ON TRIGGER 의 경우 :OLD 는 삭제 전 데이터를, :NEW는 삭제 후 데이터를 나타낸다.2) 특정 테이블에 DML문이 수행되었을 때 자동으로 동작하도록 작성된 프로그램이다.3) 테이블, 뷰에만 트리거를 작성할 수 있으며 데이터베이스 작업에는 정의할 수 없다.4) UPDATE TRIGGER 에서 :OLD 에는 수정 전, :NEW 에는 수정 후 값이 들어간다.
+
+
+
+ 
+
+문제 21. 아래의 SELECT 결과가 NULL 이 아닌 경우는?
+정답확인🌼
+
+
+
+1) SELECT COALESCE ('AB','BC','CD') FROM DUAL;2) SELECT CASE 'AB' WHEN 'BC' THEN 'CD' END FROM DUAL;3) SELECT DECODE ('AB','CD','DE') FROM DUAL;4) SELECT NULLIF ('AB','AB') FROM DUAL;
+
+
+
+ 
+
+문제 22. 아래와 같은 테이블이 있을때 아래와 같은 SQL 의 수행결과에 대해 작성하시오
+정답확인🌼
+SQLD_30_22
+
+COL1     COL2
+--------------
+100       100
+NULL      60
+NULL      NULL
+
+
+SELECT COALESCE(COL1, COL2*50, 50) FROM SQLD_30_22;
+📝Memo 
+
+
+
+1) 100, 3000, 502) 100, 60, NULL3) 100, NULL, NULL4) 100, 3000, NULL
+
+
+
+ 
+
+문제 23. 아래의 DML, DCL, DDL 이 잘못 짝지워진 것은?
+정답확인🌼
+
+
+
+1) DDL : CREATE2) DML : UPDATE3) DCL : ROLLBACK4) DCL : SELECT
+
+
+
+ 
+
+문제 24. 보기의 SQL 명령어중 TCL 인 것은 어떤 것인가?
+정답확인🌼
+[보기]
+UPDATE
+GRANT
+SELECT
+COMMIT
+
+
+
+1) UPDATE2) GRANT3) SELECT4) COMMIT
+
+
+
+ 
+
+문제 25. 아래의 특징을 가지는 데이터 타입은 무엇인가?
+정답확인🌼
+[보기]
+고정 길이 문자열 정보로 S만큼 최대 길이를 갖고 고정 길이를 가지고 있으므로 
+할당된 변수 값의 길이가 S보다 작을 경우에는 그 차이 길이 만큼 공간으로 채워진다.
+
+
+
+1) CHARACTER2) VARCHAR3) NUMERIC4) DATETIME
+
+
+
+ 
+
+문제 26. 아래의 SQL 과 항상 동일한 결과를 나타내는 SQL을 고르시오 
+정답확인🌼
+SQL>
+SELECT TOP(10) FIRST_NAME, JOB_ID
+FROM HR.EMPLOYEES
+ORDER BY SALARY;
+📝Memo 
+
+
+
+1)
+
+
+SELECT FIRST_NAME, JOB_ID          FROM HR.EMPLOYEES WHERE ROWNUM <= 10 ORDER BY SALARY;
+
+
+
+2)
+
+
+SELECT TOP(10) WITH TIES FIRST_NAME, JOB_ID          FROM HR.EMPLOYEESORDER BY SALARY;
+
+
+
+
+
+3)
+
+
+SELECT FRIST_NAME,JOB_ID FROM (       SELECT FIRST_NAME, JOB_ID, ROWNUM RN
+
+
+       FROM HR.EMPLOYEES
+
+
+       ORDER BY SALARY
+
+
+       )
+
+
+
+
+WHERE RN <= 10;
+
+
+
+
+
+
+4)
+
+
+SELECT FRIST_NAME,JOB_ID FROM (       SELECT FIRST_NAME, JOB_ID        FROM HR.EMPLOYEES        ORDER BY SALARY       )
+
+
+WHERE ROWNUM <= 10;
+
+
+
+
+
+
+
+
+
+
+문제 27. 아래의 계층형 SQL 을 수행하여 아래와 같은 결과가 나올 때 () 에 맞는 것을 고르시오
+정답확인🌼
+[SQL]
+
+SELECT LEVEL,
+    LPAD('** ',(LEVEL -1)*2,'**') || EMPLOYEE_ID AS EMP_TREE,
+    MANAGER_ID,
+    EMPLOYEE_ID
+  FROM HR.EMPLOYEES
+WHERE 1 = 1
+START WITH (   )
+CONNECT BY PRIOT (   );
+
+[RESULT]
+
+LEVEL     EMP_TREE      MANAGER_ID      EMPLOYEE_ID
+----------------------------------------------------
+    1     100                               100
+    2     **101               100           101
+    3     *** 108             101           108
+    4     ***** 109           108           109
+    4     ***** 110           108           110
+    4     ***** 111           108           111
+    4     ***** 112           108           112
+    
+    .
+    .
+    .
+뒷 결과 생략
+📝Memo 
+
+
+
+1) MANAGER_ID IS NULL,     MANAGER_ID = EMPLOYEE_ID2) MANAGER_ID IS NOT NULL,     MANAGER_ID = EMPLOYEE_ID3) MANAGER_ID IS NULL,     EMPLOYEE_ID = MANAGER_ID4) MANAGER_ID IS NOT NULL,     EMPLOYEE_ID = MANAGER_ID
+
+
+
+ 
+
+문제 28. SQL Set Operation 에서 중복 제거를 위해 정렬 작업을 하지 않는 집합 연산자는?
+정답확인🌼
+
+
+
+1) UNION2) UNION ALL3) INTERSECT4) MINUS
+
+
+
+ 
+
+문제 29. SQL Set Operation 에서 중복 제거를 위해 정렬 작업을 하지 않는 집합 연산자는? 
+정답확인🌼
+[보기]
+
+대용량 데이터를 정렬하여 조인한다
+동등 조인, 비동등 조인에서 모두 사용 가능하다
+각 테이블을 정렬한 후 조인한다.
+📝Memo 
+
+
+
+1) Sort Merge Join2) Hash Join3) Nested Loop Join4) Cartesian Join
+
+
+
+ 
+
+문제 30. 아래 ERD 를 참고하여 모든 회원의 총 주문금액을 구하는 SQL 중 잘못된 SQL 은? 
+정답확인🌼
+
+ 
+📝Memo 
+
+
+
+1)
+
+
+SELECT A.고객명,          NVL(SUM(C.수량*B.상품가격),0) AS 총주문금액 FROM SQLD_30_30_고객 A    INNER JOIN SQLD_30_30_주문 C ON A.고객ID = C.고객ID    INNER JOIN SQLD_30_30_상품 B ON C.상품ID = B.상품ID WHERE 1=1GROUP BY A.고객명 ORDER BY 1,2;
+
+
+
+2)
+
+
+SELECT A.고객명,         NVL(SUM(총가격),0) AS 총주문금액 FROM SQLD_30_30_고객 A         LEFT OUTER JOIN         (         SELECT C.고객ID, C.수량 * B.상품가격 AS 총가격          FROM SQLD_30_30_주문 C    INNER JOIN SQLD_30_30_상품 B ON C.상품ID = B.상품ID) D        ON A.고객ID = D.고객IDWHERE 1=1 GROUP BY A.고객명 ORDER BY 1,2;
+
+
+
+
+
+3)
+
+
+SELECT A.고객명,      NVL((        SELECT SUM(C.수량 * B.상품가격)       FROM SQLD_30_30_주문 C         LEFT JOIN SQLD_30_30_상품 B ON C.상품ID = B.상품ID      WHERE C.고객ID = A.고객ID),0 ) AS 총주문금액FROM SQLD_30_30_고객 A WHERE 1=1ORDER BY 1,2;
+
+
+
+4)
+
+
+SELECT A.고객명,      NVL(SUM(C.수량*B.상품가격),0) AS 총주문금액 FROM SQLD_30_30_고객 ALEFT OUTER JOIN SQLD_30_30_주문 C ON A.고객ID = C.고객IDLEFT OUTER JOIN SQLD_30_30_상품 B ON C.상품ID = B.상품ID WHERE 1=1GROUP BY A.고객명 ORDER BY 1,2;
+
+
+
+
+
+
+ 
+
+문제 31. 아래의 SQL 의 로우의 건수로 올바른 것은?
+정답확인🌼
+SQLD_30_31_01
+COL1      COL2
+--------------
+  1         2
+  1         2
+  1         3
+
+SQLD_30_31_02
+COL1      COL2
+--------------
+  1         2
+  1         4
+  1         5
+
+SQL>
+SELECT DISTINCT COL1, COL2
+FROM SQLD_30_31_01
+	UNION ALL
+SELECT COL1, COL2
+FROM SQLD_30_31_02;
+📝Memo 
+
+
+
+1) 32) 43) 54) 6
+
+
+
+
+문제 32. 아래의 데이터를 참고하여 다음 SQL의 로우의 건수가 맞는 것은?
+정답확인🌼
+SQLD_30_32_01
+COL1     COL2      COL3
+-----------------------
+  1         2      NULL
+  2      NULL         1
+  4      NULL      NULL
+  
+SQLD_30_32_02
+COL1     COL2      COL3
+-----------------------
+  1      NULL        -1
+  2      NULL         1
+  3         5         2
+  
+SQL>
+SELECT COUNT(*)
+  FROM SQLD_30_32_01 A, SQLD_30_32_02 B
+WHERE A.COL1 = B.COL1
+AND NVL(A.COL2, -1) = NVL(B.COL2, -1)
+AND NVL(A.COL3, -1) = NVL(B.COL3, -1)
+📝Memo 
+
+
+
+1) 12) 23) 34) 4
+
+
+
+
+문제 33. 아래와 같은 구조를 가진 테이블에서 Unique Index Scan 을 할 수 없는 것은?
+정답확인🌼
+[TABLE]
+SQLD_30_33
+KEY1 (PK) NUMBER
+KEY2 (PK) NUMBER
+COL1      VARCHAR2
+COL2      VARCHAR2
+COL3      VARCHAR2
+📝Memo 
+
+
+
+1) 모두 사용할 수 없다2) WHERE KEY1 =1 AND KEY2 = 23) WHERE (KEY1, KEY2) IN ( (1,2) )4) WHERE KEY1 = 1
+
+
+
+
+문제 34. 아래의 ERD 에서 아래 SQL 문을 순서대로 수행 할 경우 오류가 발생하는 구간은?
+정답확인🌼
+
+[테이블 정보]
+주문 (고객ID) REFERENCES 고객 (고객ID)
+
+[SQL]
+
+1) INSERT INTO 고객 VALUES ('C001','AAA');
+2) INSERT INTO 주문 VALUES ('O001','C001','XXX');
+3) UPDATE 주문 SET 고객ID = NULL WHERE 주문ID = 'O001';
+4) INSERT INTO 주문 VALUES ('O002','C002','YYY');
+📝Memo 
+
+
+
+1) 1 번 SQL2) 2 번 SQL3) 3 번 SQL4) 4 번 SQL
+
+
+
+ 
+
+문제 35. Cross Join 과 Natural Join 에 대한 차이점에 대해서 가장 부적절한 것은?
+정답확인🌼
+
+
+
+1) Cross Join 과 Natural Join 은 Where 절에서 조건을 걸 수 없다.2) Natural Join 에서는 특정 Join 커럼을 명시적으로 적을 수 없다.3) Cross Join 은 Join 에 참여하는 테이블의 Join Key 가 없을 경우 발생 한다.4) Natural Join 에서 Join Key 는 컬럼명으로 결정된다.
+
+
+
+ 
+
+문제 36. 아래와 같이 PK컬럼이 구성되어 있을 때 가장 적합한 파티셔닝 방법은 무엇인가?
+정답확인🌼
+[테이블 정보]
+특징 : 데이터의 양이 매우 많은 대용량 테이블, 데이터의 생성일자를 구분짓는 특정 컬럼이 없는 형태이다.
+
+PK : 지점, 코드
+📝Memo 
+
+
+
+1) Range2) List3) Hash4) Interval
+
+
+
+ 
+
+문제 37. 아래 2개 테이블에 대한 Join 후 나타난 결과이다. 해당 Join 의 방법을 고르시오
+정답확인🌼
+SQLD_30_37_01
+COL1     COL2
+--------------
+   1        2
+   2        2
+   3        3
+   
+SQLD_30_37_02
+COL1     COL2
+--------------
+   1        2
+   2        4
+   4        5
+   
+SQL>
+SELECT *
+FROM SQLD_30_37_01 A
+    (    ) SQLD_30_37_02 B
+          ON (A.COL1 = B.COL1)
+WHERE 1 = 1;
+
+[RESULT]
+
+A.COL1    A.COL2    B.COL1    B.COL2
+------------------------------------
+     1         2         1         2
+     2         2         2         4
+  NULL      NULL         4         5
+📝Memo 
+
+
+
+1) LEFT OUTER JOIN2) RIGHT OUTER JOIN3) FULL OUTER JOIN4) INNER JOIN
+
+
+
+ 
+
+문제 38. 특정 그룹에서 특정 컬럼으로 정렬된 결과에서 첫번째 값을 구하는 Window Function 을 고르시오.
+정답확인🌼
+
+
+
+1) LAST_VALUE () OVER2) FIRST_VALUE () OVER3) MAX() OVER4) 없다
+
+
+
+ 
+
+문제 39. 아래의 SQL 구문이 순서대로 수행된 후의 결과로 올바른 것은?
+정답확인🌼
+[SQL]
+CREATE TABLE SQLD_30_39 (N1 NUMBER); INSERT INTO SQLD_30_39 VALUES(1);
+INSERT INTO SQLD_30_39 VALUES(2);
+CREATE TABLE TMP_SQLD_30_39 (N1 NUMBER); 
+INSERT INTO TMP_SQLD_30_39 VALUES(1); 
+TRUNCATE TABLE TMP_SQLD_30_39; ROLLBACK;
+COMMIT;
+SELECT SUM(N1) FROM SQLD_30_39;
+
+
+
+1) 12) 23) 34) 4
+
+
+
+ 
+
+문제 40. 아래와 같은 데이터가 존재할 때 SQL 의 실행 결과로 올바른 것은?
+정답확인🌼
+SQLD_30_40
+COL1     COL2
+-------------
+   1       10
+   2       20
+   3     NULL
+   
+SQL>
+SELECT AVG( NVL (COL2, 0)) AS AVG_COL
+FROM SQLD_30_40;
+📝Memo 
+
+
+
+1) 102) 153) NULL4) 20
+
+
+
+ 
+
+문제 41. 아래의 SQL 에서 ORDER BY 로 사용 할 수 없는 것은?
+정답확인🌼
+[SQL] 
+SELECT JOB, COUNT(*) AS CNT 
+FROM TAB_A
+GROUP BY JOB;
+ 
+
+
+
+1) ORDER BY JOB2) ORDER BY CNT DESC3) ORDER BY COUNT(*)4) ORDER BY 3
+
+
+
+ 
+
+문제 42. 아래의 데이터가 존재할 때 보기의 SQL 을 수행한 후 SQLD_30_42_01 테이블의 건수는?
+정답확인🌼
+SQLD_30_42_01
+COL1     COL2     COL3
+   A        X        1
+   B        Y        2
+   C        Z        3
+   X        T        1
+   
+SQLD_30_42_02
+COL1     COL2     COL3
+   A        X        1
+   B        Y        2
+   C        Z        3
+   D        가       4
+   E        나       5
+   
+SQL>
+MERGE INTO SQLD_30_42_01 A
+  USING SQLD_30_42_02 B
+    ON (A.COL1 = B.COL1)
+  WHEN MATCHED THEN
+    UPDATE SET A.COL3 = 4
+         WHERE A.COL3 = 2
+    DELETE WHERE A.COL3 <= 2
+  WHEN NOT MATCHED THEN
+    INSERT (A.COL1, A.COL2, A.COL3)
+    VALUES (B.COL1, B.COL2, B.COL3);
+📝Memo 
+
+
+
+1) 32) 43) 54) 6
+
+
+
+ - - - - - - - - 주관식 - - - - - - - - 
+
+문제 43. SELECT ABS(-3.8), FLOOR(3.8), TRUNC(3.8), ROUND(3.8) FROM DUAL; 에 대한 값을 구하시오.
+정답확인🌼
+✏️
+ 
+
+문제 44. 아래에서 설명하는 것은 무엇인가?
+정답확인🌼
+
+
+
+[보기]
+
+
+복잡한 질의를 단순하게 작성할 수 있다.또한 해당 형태의 SQL문을 자주 사용할 때 이용하면 편리하게 사용할 수 있다. 사용자에게 정보를 감출 수 있다실제 데이터 를 가지고 있지 않다
+
+
+
+
+
+
+✏️
+ 
+
+문제 45. 아래와 같은 데이터가 들어있는 테이블에서 아래 sql이 수행되었을 때의 결과 건수는?
+정답확인🌼
+[TABLE] SQLD_30_45
+계층번호     상위계층번호
+--------------------
+     1         NULL
+     2         NULL
+     4            1
+     5            1
+     6            2
+     7            2
+     8            4
+     9            5
+    10            6
+    11            7
+    
+SQL>
+SELECT LEVEL,
+   LPAD('** ',(LEVEL - 1)*2,' ') || 계층번호 AS 계층트리,
+   계층번호,
+   상위계층번호
+FROM SQLD_30_45
+START WITH 상위계층번호 IS NULL
+CONNECT BY 계층번호 = PRIOR 상위계층번호;
+✏️
+ 
+
+문제 46. 아래의 SQL 구문은 컬럼의 데이터 타입을 변형하는 SQL 구문이다. SQL 구문을 완성하시오. (SQL SERVER 기준임)
+정답확인🌼
+[SQL] ( ) DEPT ( ) VARCHAR(30) NOT NULL;
+✏️
+ 
+
+문제 47. 아래와 같은 테이블이 있을 때 아래의 SQL 구문이 순서대로 수행되었을 때 마지막 SQL의 수행 결과를 적으시오.
+정답확인🌼
+[TABLE]
+SQLD_47
+COL1   VARCHAR2(30)
+COL2   NUMBER
+
+[SQL]
+INSERT INTO SQLD_47(COL1, COL2) VALUES('ABCD',NULL);
+INSERT INTO SQLD_47(COL1, COL2) VALUES('BC',NULL);
+ALTER TABLE SQLD_47 MODIFY COL2 DEFAULT 10;
+INSERT INTO SQLD_47(COL1, COL2) VALUES('XY',NULL);
+INSERT INTO SQLD_47(COL1) VALUES('EXD');
+SELECT SUM(COL2) FROM SQLD_47;
+✏️
+ 
+
+문제 48. 테이블 생성을 위한 권한을 주기 위해 아래의 SQL 을 완성하시오
+정답확인🌼
+[SQL] ( ) CREATE TABLE TO USER01;
+✏️
+ 
+
+문제 49. 아래와 같은 결과가 나오도록 SQL 을 작성하시오
+정답확인🌼
+[RESULT]
+TABLE : SQLD_30_49
+회원ID    RANK    주문금액
+-----------------------
+    B       1      450
+    G       2      255
+    F       2      255
+    H       3      100
+
+SQL>
+SELECT 회원ID,
+    DENSE_RANK() OVER(ORDER BY (    )),
+    주문금액
+FROM SQLD_30_49;
+✏️
+ 
+
+문제 50. 아래의 SQL 결과를 작성하시오
+정답확인🌼
+[SQL] SELECT UPPER("Sqldeveloper") FROM DUAL;
+✏️
+
+📝SQLD. 제 30 회 기출 문제(총 50) - 정답 / 해설
+ 
+
+1. 정답 :  2 
+📖문제확인
+ 
+해설 : 
+
+
+
+구분
+설명
+
+
+도메인
+데이터타입, 크기, 제약사항 지정
+
+
+제약조건
+PK(기본키), Unique Key(고유키), Foreign Key(외래키), Check(입력값 범위제한) 
+
+
+식별자
+주식별자특징 : 유일성, 최소성, 불변성(값이 바뀌지 않음), 존재성(Not null)
+
+
+정규화
+함수의 종속성을 이용해 무손실 분해한다. (입력/수정/삭제 성능 향상) *반정규화는 조인성능 향상
+
+
+
+ 
+
+2. 정답 :  4 
+📖문제확인
+ 
+해설 : 반정규화 전에 테이블 추가 (통계, 중복, 이력 테이블 추가) 를 통해 반정규화를 회피한다. - 해당내용은 반정규화 기법임.
+ 
+
+3. 정답 :  3 
+📖문제확인
+ 
+해설 : 사원 (기본 엔터티이다.)
+ 
+
+4. 정답 :  3 
+📖문제확인
+ 
+해설 : 중심 엔터티 : 상품, 주문상품 -> 상품은 기본 엔터티이다.
+ 
+
+5. 정답 :  3 
+📖문제확인
+ 
+해설 : 논리적 모델링
+ 
+
+6. 정답 :  2 
+📖문제확인
+ 
+해설 : N개 테이블을 조인할 경우 조인 최소 조건은 N-1개이다.
+ 
+
+7. 정답 :  4 
+📖문제확인
+ 
+해설 : 테이블에 지나치게 많은 조인과 Sorting, Order by 프로세스가 많은 경우
+ 
+
+8. 정답 :  1 
+📖문제확인
+ 
+해설 : 대표성 여부에 따라 분류되는 주식별자와 보조식별자에서 주식별자는 대표성을 가지지 못해 참조관계 연결을 못한다.
+ 
+
+9. 정답 :  2 
+📖문제확인
+ 
+해설 : 
+
+
+
+구분
+설명
+
+
+분산 DB
+논리적으로 같은 시스템, 물리적 분산, 데이터 무결성 해침
+
+
+분할 투명성
+분할되서 여러군데 저장
+
+
+위치 투명성
+저장장소 명시 불필요, 데이터베이스의 실제 위치를 알 필요없이 단지 데이터베이스의 논리적인 명칭만으로 엑세스 할 수 있다.
+
+
+지역사상 투명성
+지역 DBMS와 물리적 DB 사이 Mapping 보장
+
+
+중복 투명성
+데이터가 여러 곳에 중복되어 있더라도 사용자는 마치 하나의 데이터만 존재하는 것처럼 사용 가능하다.
+
+
+장애 투명성
+트랜잭션, DBMS, 네트워크, 컴퓨터 장애에도 트랜잭션을 정확하게 처리한다.
+
+
+병행 투명성
+다수의 트랜잭션이 동시에 실현되더라도 그 결과는 영향을 받지 않는다.
+
+
+
+ 
+
+10. 정답 :  2 
+📖문제확인
+ 
+해설 : Row Chaining (row 의 길이가 너무 길때 여러 블록에 걸쳐서 저장한다.)
+ 
+
+11. 정답 :  1
+📖문제확인
+ 
+해설 : ORA-01722: 수치가 부적합합니다. (VARCHAR : 가변 문자열이므로 비교연산을 할수없다.)
+ 
+
+12. 정답 :  1 
+📖문제확인
+ 
+해설 : ORA-01427: 단일 행 하위 질의에 2개 이상의 행이 리턴되었습니다. ( 서브쿼리는 단 1개의 행만 가져올수있다. )
+SQL> SELECT A.COL1,
+            (SELECT COL3 FROM SQLD_30_12_02 B 
+            WHERE A.COL1 = B.COL1) AS B_COL3
+FROM SQLD_30_12_01 A 
+WHERE A.COL2 > 10;
+ERROR:
+ORA-01427: single-row subquery returns more than one row
+
+
+
+no rows selected
+
+SQL> SELECT A.COL1,
+            (SELECT COL5 FROM SQLD_30_12_03 B 
+            WHERE A.COL4 = B.COL4) AS B_COL3
+FROM SQLD_30_12_02 A 
+WHERE A.COL4 > 0;
+
+COL1  B_COL
+----- -----
+1     A
+2     B
+3     C
+A     D
+
+SQL> SELECT A.COL1, B.COL3 
+FROM SQLD_30_12_01 A
+             INNER JOIN SQLD_30_12_02 B 
+                         ON (A.COL1 = B.COL1)
+             INNER JOIN SQLD_30_12_03 C 
+                         ON (B.COL4 = C.COL4)
+WHERE C.COL4 > 5 
+AND A.COL2 > 10;
+
+COL1  COL3
+----- -----
+1     ABC
+2     DEF
+3     XY
+
+SQL> SELECT A.COL1, B.COL3 
+FROM SQLD_30_12_01 A
+            INNER JOIN SQLD_30_12_02 B 
+                  ON (A.COL1 = B.COL1)
+WHERE EXISTS (SELECT 'X'
+                  FROM SQLD_30_12_03 C
+                  WHERE B.COL4 = C.COL4);
+
+COL1  COL3
+----- -----
+1     ABC
+2     DEF
+3     XY
+A     1
+ 
+
+13. 정답 :  1 
+📖문제확인
+ 
+해설 : ROLLUP (JOB_ID, MANAGER_ID)
+ 
+
+14. 정답 :  2 
+📖문제확인
+ 
+해설 : COL1 = A , COL2 = 50 의 조건을 만족하는 개수를 출력하므로 답은 1개이다.
+ 
+
+15. 정답 :  2 
+📖문제확인
+ 
+해설 : COL1 이 A or X or Null 인 COL2 의 컬럼값을 합해주세요.(X, 30) (A,40) (A,50) Null은 포함되지않는다 X 
+30+40+50 = 120
+ 
+
+16. 정답 :  1 
+📖문제확인
+ 
+해설 : (계층구조) 선행테이블 -> 인덱스 ->조인
+ 
+
+17. 정답 :  1 
+📖문제확인
+ 
+해설 : WHERE 1 = 2 ( count(*) = 0 공집합이다. )
+NVL -> ( count(*) is null 이면 9999, 아니면 count(*) 반환 0이므로 정답 0 )
+
+18. 정답 :  2 
+📖문제확인
+ 
+해설 : 집계함수 SUM은 NULL 을 포함하지않는다.
+ 
+
+19. 정답 :  4 
+📖문제확인
+ 
+해설 : SAVEPOINT 이름이 같을때 마지막에 저장한 값으로 ROLLBACK 한다.
+ 
+
+20. 정답 :  3 
+📖문제확인
+ 
+해설 : 트리거는 DB 자체에 저장, 테이블, 뷰에 사용가능 
+
+
+
+Procedure
+Trigger
+
+
+EXECUTE 명령어로 실행
+자동 실행(이벤트 발생할때)
+
+
+CREATE Procedure
+CREATE Trigger
+
+
+COMMIT, ROLLBACK 가능
+COMMIT, ROLLBACK 불가능
+
+
+반드시 값 RETURN 필요 X
+DML 을 주로 사용
+
+
+
+ 
+
+21. 정답 :  1 
+📖문제확인
+ 
+해설 : COALESCE 함수는 처음으로 NULL이 아닌 컬럼 값을 만나면 그 컬럼 값을 리턴 한다. coalesce(합치다) 
+ 
+
+22. 정답 :  1 
+📖문제확인
+ 
+해설 : COALESCE(표현식1, 표현식2, ∙∙∙) : 임의의 개수 표현식에서 NULL이 아닌 최초의 표현식을 출력 
+(모든 표현식이 NULL 이면 NULL 리턴)
+SELECT COALESCE(COL1, COL2*50, 50) FROM SQLD_30_11;
+-> (100, 100) COL1 = 100 이므로 100 
+-> (NULL, 60) COL1 = NULL 이므로 pass, COL2 = 60 이므로 60*50 = 3000 
+-> (NULL, NULL) 이면 pass, 50
+( 100, 3000, 50 )
+ 
+
+23. 정답 :  4 
+📖문제확인
+ 
+해설 : SELECT 는 데이터 조작어(Data Manipulation Language) DML 에 속한다.
+
+
+
+구분
+종류
+
+
+DDL
+CREATE, DROP, MODIFY(오라클), ALTER(SQL서버)
+
+
+DML
+SELECT, INSERT, DELETE, UPDATE
+
+
+DCL
+GRANK, REVOKE
+
+
+TCL
+COMMIT, ROLLBACK, SAVEPOINT
+
+
+
+
+DCL은 트랜잭션 을 제어하는데 특화된 명령어를 TCL(Transaction Control Language) '트랜잭션을 제어하는 SQL 언어' 라고 한다.
+세부적으로는 DCL이 TCL을 포함하고 있다.
+
+24. 정답 :  4 
+📖문제확인
+ 
+해설 : TCL(Transaction Control Language) - COMMIT, ROLLBACK, SAVEPOINT
+ 
+
+25. 정답 :  1 
+📖문제확인
+ 
+해설 : CHARACTER (고정길이 문자열, S만큼 최대길이(그보다 작을시 공백으로 채운다.)
+ 
+
+26. 정답 :  4 
+📖문제확인
+ 
+해설 : ROWNUM( 상위 N개 추출 ) , TOP( ORDER BY가 있을시 정렬 후 상위 N개 추출 )
+ 
+
+27. 정답 :  3 
+📖문제확인
+ 
+해설 : 
+ 
+
+28. 정답 :  2 
+📖문제확인
+ 
+해설 : UNION ALL (합집합 & 중복허용)
+ 
+
+29. 정답 :  1 
+📖문제확인
+ 
+해설 : Sort Merge Join ( 정렬 병합 조인 )
+ 
+
+30. 정답 :  1 
+📖문제확인
+ 
+해설 : 
+ 
+
+31. 정답 :  3 
+📖문제확인
+ 
+해설 : DISTINCT(중복제거), UNION ALL(중복 허용 합집합)
+ 
+
+32. 정답 :  1 
+📖문제확인
+ 
+해설 : 
+ 
+
+33. 정답 :  4 
+📖문제확인
+ 
+해설 : WHERE KEY 1 = 1
+ 
+
+34. 정답 :  4 
+📖문제확인
+ 
+해설 : 'C002' 고객ID 가 주문에만 있을 수 없음 -- ORA-02291 : 무결성 제약조건(LSS.고객_FK)이 위배... - 부모 Key가 없습니다.
+ 
+
+35. 정답 :  1 
+📖문제확인
+ 
+해설 : Cross Join 은 Where 절에서 조건을 걸 수 있다.
+ 
+
+36. 정답 :  2 
+📖문제확인
+ 
+해설 : LIST ( 대량 데이터 / 특정컬럼(생성일자) 없음 / PK )
+ 
+
+37. 정답 :  2 
+📖문제확인
+ 
+해설 : RIGHT OUTER JOIN
+ 
+
+38. 정답 :  2 
+📖문제확인
+ 
+해설 :
+1) LAST_VALUE() OVER : 가장 마지막 값
+2) FIRST_VALUE () OVER : 제일 처음값
+3) MAX() OVER : 제일 큰 값
+ 
+
+39. 정답 :  3 
+📖문제확인
+ 
+해설 : 
+ 
+
+40. 정답 :  1 
+📖문제확인
+ 
+해설 : 10
+ 
+
+41. 정답 :  4 
+📖문제확인
+ 
+해설 : 
+ 
+
+42. 정답 :  4 
+📖문제확인
+ 
+해설 : 6 -- MERGE 에서의 DELETE 구문은 DELETE 단독 구문이 아닌 UPDATE 구문에 종속됨 UPDATE 실행된 건에 한해서 DELETE 구문이 수행된다.
+ 
+ - - - - - - - - 주관식 - - - - - - - - 
+ 
+
+43. 정답 :  3.8 , 3 , 3 , 4
+📖문제확인
+ 
+해설 : ABS(절댓값), FLOOR(ceil의 반대, 정수로 내림), TRUNC(소수점 버림), ROUND(반올림)
+ 
+
+44. 정답 :  View
+📖문제확인
+ 
+해설 : view (하나 이상의 기본 테이블이나 다른 뷰를 이용하여 생성되는 가상 테이블)
+ 
+
+45. 정답 :  2 
+📖문제확인
+ 
+해설 : 
+-> FROM 해당표 선택
+-> START WITH 상위계층번호 IS NULL(1, 2 선택)
+-> CONNECT BY 계층번호 = PRIOR 상위계층번호
+     PRIOR 자식 = 부모
+-> PRIOR 상위계층번호 = NULL인 계층번호가 없으므로 종료
+-> 2건 출력
+ 
+
+46. 정답 :  ALTER TABLE, ALTER COLUMN
+📖문제확인
+ 
+해설 : 
+ 
+
+47. 정답 :  10
+📖문제확인
+ 
+해설 : 
+ 
+
+48. 정답 :  GRANT
+📖문제확인
+ 
+해설 : GRANT( 권한부여 ) / REVORK( 권한회수 )
+ 
+
+49. 정답 :  주문금액 DESC
+📖문제확인
+ 
+해설 : DENSE_RANK() (동일 순위, 순위 건너뛰기 X (1위, 2위, 2위, 3위)
+-> 주문금액에 따라 순위부여
+-> DENSE_RANK() OVER(ORDER BY 주문금액 DESC) 내림차순 정렬
+ 
+
+50. 정답 :  SQLDEVELOPER
+📖문제확인
+ 
+해설 : UPPER ( 대문자로 변환 ), LOWER ( 소문자로 변환 ), INITCAP ( 첫 번째 문자만 대문자로 변환 )
+ 

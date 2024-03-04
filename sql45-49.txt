@@ -1,0 +1,954 @@
+
+
+
+📖 SQLD 45 ~ 49회 기출문제 단답형 모음 
+
+
+문제 1. 
+45회 단답형 1 (1과목). 업무에서 필요로 하는 인스턴스로 관리하고자 하는 의미상 더 이상 분리 되지 않는 최소의 데이터 단위는?
+(노랭이 1과목 14번)
+✏️정답확인
+
+
+문제 2.
+45회 단답형 2 (1과목). 기본키가 아닌 모든 속성이 기본키에 완전 함수 종속된 상태를 무엇이라 하는가?
+✏️정답확인
+
+
+문제 3.
+45회 단답형 3 (2과목). 아래 SQL1 과 같은 결과가 나오도록 SQL2 빈칸을 작성하시오.
+[SQL1]
+SELECT*FROM A, B;
+
+[SQL2]
+SELECT*FROM A (       ) B;
+✏️정답확인
+
+
+문제 4.
+45회 단답형 4 (2과목). 아래의 계층형 쿼리 결과에서 C3의 2번째 값을 작성하시오.
+[SQLD44]
+C1  C2   C3
+------------
+ 1 NULL  A
+ 2  1    B
+ 3  1    C
+ 4  2    D
+
+[SQL]
+SELECT C1, C2, C3
+FROM SQLD44
+     CONNECT BY PRIOR C1 = C2
+           START WITH C1 = 1
+     ORDER SIBLINGS BY C1 DESC;
+✏️정답확인
+
+
+문제 5.
+45회 단답형 5 (2과목). 아래의 계층형 쿼리 결과를 작성하시오.
+[SQLD45]
+
+ C1  C2  C3
+-------------- 
+ 1       KING
+ 2   1   JOHN
+ 3   2   SCOTT
+
+[SQL]
+SELECT C3 FROM SQLD45
+   WHERE C1 <> 2
+   CONNECT BY C1 = PRIOR C2
+   START WITH C1 = 2;
+✏️정답확인
+
+
+문제 6.
+45회 단답형 6 (2과목). GRANT, REVOKE 등의 SQL을 무엇이라 하는가?
+✏️정답확인
+
+
+문제 7.
+45회 단답형 7 (2과목). 아래의 SQL결과의 빈칸을 작성하시오. 
+[SQLD45]
+COL1  COL2  COL3
+--------------------
+ A     가    10
+ A     가    20
+ A     다    25
+ B     가    10
+ B     나    30
+ B     나    20
+ B     나    60
+ C     라    30
+
+[SQL]
+SELECT NTILE_3, COUNT(*) AS ROWCNT
+FROM (
+      SELECT COL1, COL2, COL3, NTILE(3) OVER(ORDER BY COL3) AS NTILE_3
+      FROM SQLD45
+      )
+GROUP BY NTILE_3;
+
+[RESULT]
+NTILE_3   ROWCNT
+-----------------
+1         ( ㄱ )
+2           3
+3         ( ㄴ )
+( ㄱ )
+( ㄴ )
+ 
+정답확인
+
+
+문제 8.
+45회 단답형 8 (2과목). 아래 SQL의 빈칸(    ?    ) 을 작성하시오.
+[SQLD45]
+V1	    N1
+----------------
+A	    100
+B	    150
+C	   1400
+D	    450
+E	     50
+
+[SQL]
+SELECT V1, N1,
+  COUNT(N1) OVER 
+            (ORDER BY N1 (  ?  ) 
+            BETWEEN 0 PRECEDING 
+            AND
+            50 FOLLOWING) AS CNT 
+FROM SQLD45;
+✏️ 정답확인
+
+
+문제 9.
+45회 단답형 9 (2과목). 아래의 SQL결과를 적으시오. 
+[SQLD45]
+
+ N1   ID    N2
+--------------
+ 200  A     T1
+ 250  B     T2
+ 300  NULL  T3
+ 
+[SQL]
+SELECT COUNT(*) FROM SQLD45
+WHERE N1 >= 200 OR N2 IS NULL AND ID = 'B';
+✏️정답확인
+
+
+문제 10.
+45회 단답형 10 (2과목). 아래의 SQL결과를 적으시오.
+[SQLD45]
+
+N1   V1
+--------
+ 1  SMITH
+ 2  JOHN
+ 3  ALX
+ 4  CLARE
+ 5  BLX
+ 
+[SQL]
+SELECT COUNT(*) 
+FROM SQLD45 
+WHERE V1 LIKE '_L%';
+✏️정답확인
+
+
+문제 11.
+46회 단답형 1 (1과목). 속성이 가질 수 있는 값의 범위를 무엇이라 하는지 작성하시오.
+✏️정답확인
+
+
+문제 12.
+46회 단답형 2 (2과목). 아래의 빈칸(   ?   )에 알맞은 것을 작성하시오.
+주식별자의 5가지 특징중 하나인 (  ?  )은 
+하나의 키로 특정 행을 바로 찾아낼수 있는 고유한 데이터 속성을 말한다.
+✏️정답확인
+
+
+문제 13.
+46회 단답형 3 (2과목).  아래의 SQL결과를 적으시오.
+[TAB1]
+COL1
+------
+4
+8
+4
+8
+NULL
+NULL
+
+[SQL]
+SELECT AVG(COL1) - AVG(NVL(COL1, 0)) FROM TAB1;
+✏️정답확인
+
+
+문제 14-1.
+46회 단답형 4 (2과목). 신규 사원의 경우 일시적으로 부서에 속해 있지 않다고 가정하고 DEPT와 EMP를 조인하되 부서가 없는 사원을 출력하도록 할 때, 아래 SQL문장의 (   ?   )안에 들어갈 내용을 작성하시오.
+[SQL]
+SELECT E.ENAME
+FROM DEPT D (   ?   ) EMP E
+ON D.DEPTNO = E.DEPTNO
+WHERE E.DEPTNO IS NULL;
+✏️정답확인
+ 
+
+문제 14-2. 위와 같은 유형의 ( 노랭이 2과목 75번 문제 )
+- 신규 부서의 경우 일시적으로 사원이 없는 경우도 있다고 가정하고 DEPT와 EMP를 조인하되 사원이 없는 부서 정보도 같이 출력하도록 할 때, 아래 SQL문장의 (   ?   ) 안에 들어갈 내용을 작성하시오.
+ 
+[SQL]
+SELECT E.ENAME, D.DEPTNO, D.DNAME
+FROM DEPT D (   ?   ) EMP E
+ON D.DEPTNO = E.DEPTNO;
+✏️정답확인
+ 
+
+문제 14-3. OUTER JOIN 문제
+- 다음은 Oracle 데이터베이스에서 사용하는 OUTER JOIN의 예제이다. 빈칸(    ?    )을 채워 Oracle의 OUTER JOIN을 표준 ANSI SQL로 변경하시오.
+[Oracle OUTER JOIN]
+SELECT * FROM EMP, DEPT
+WHERE EMP.DEPTNO(+) = DEPT.DEPTNO;
+
+[ANSI JOIN]
+SELECT * FROM EMP (   ?   ) DEPT
+ON (EMP.DEPTNO = DEPT.DEPTNO);
+✏️정답확인
+ 
+
+
+문제 15.
+46회 단답형 5 (2과목). 다음과 같은 결과를 조회하기 위한 SQL문의 빈칸 (   ?   ) 을 작성하시오.
+[TAB1]
+JOB
+-----
+10
+20
+30
+
+
+[TAB2]
+GRADE
+-----
+50
+60
+70
+
+[RESULT]
+GRADE    JOB    SUM(GRADE)
+--------------------------
+50       10       50
+50       20       50
+50       30       50
+50                150
+60       10       60
+60       20       60
+60       30       60
+60                180
+70       10       70
+70       20       70
+70       30       70
+70                210
+[SQL]
+SELECT B.GRADE, A.JOB, SUM(B.GRADE)
+FROM TAB1 A, TAB2 B GROUP BY (          );
+✏️정답확인
+
+
+문제 16.
+ 
+47회 단답형 1 (1과목). 
+주문번호+상품번호 PK, 상품명 컬럼, 상품명이 주식별자의 하나에 종속적인 상태
+이 상태는 어떤 정규형을 만족하지 않는가?
+✏️정답확인
+
+
+문제 17.
+47회 단답형 2 (1과목). 아래의 설명에 해당하는 스키마를 적으시오.
+뷰 단계 여러 개의 사용자 관점으로 구성 되어 있으며, 
+각 개인의 입장에서 필요로 하는 데이터베이스의 논리적 구조를 정의한 것
+✏️정답확인
+
+
+문제 18.
+47회 단답형 3 (2과목). USER를 삭제할 때 USER 에 속한 모든 OBJECT를 같이 삭제하는 명령어를 작성하시오.
+[SQL]
+
+ALTER DROP USER user_name (   ?   )
+✏️정답확인
+
+
+문제 19.
+47회 단답형 4 (2과목). 아래의 SQL을 완성하시오.
+[TAB1]
+COL1   
+------
+1000    
+1000   
+1000    
+3000     
+3000   
+4000 
+9999  
+9999   
+
+[RESULT]
+COL1
+----
+3000
+9999
+
+[SQL]
+SELECT COL1 FROM TAB1
+(   ?   ) COL1 HAVING COUNT(*) = 2
+ORDER BY (CASE WHEN COL1 = 1000 THEN 0 ELSE COL1 END);
+✏️정답확인
+
+
+문제 20.
+47회 단답형 5 (2과목). 아래의 SQL에 대한 결과를 적으시오.
+[TAB1]
+COL1   COL2    COL3   COL4
+---------------------------
+1       2      200     20
+2       3      240     10
+3       4      100     20
+4       5      230     20
+5       6      300     20
+6       7      400     10
+
+[SQL]
+
+SELECT COL2, COL1
+FROM (SELECT ROW_NUMBER() 
+      OVER(PARTITION BY COL4 
+      ORDER BY COL3 DESC) RN,
+      COL1, COL2 FROM TAB1
+      WHERE COL1 <> 5 AND COL4 > 10)
+WHERE RN = 1;
+✏️정답확인
+
+
+문제 21.
+47회 단답형 6 (2과목). 아래의 계층형 쿼리의 결과를 작성하시오.
+[TAB1]
+COL1 COL2
+----------
+1    NULL
+2    NULL
+3    1
+4    1
+5    2
+6    2
+7    3
+8    4
+9    5
+
+[SQL]
+SELECT COUNT(*)
+FROM TAB1
+WHERE COL1 <> 4
+START WITH COL1= 1
+CONNECT BY PRIOR COL1 = COL2;
+​
+✏️정답확인
+
+
+문제 22.
+48회 단답형 1 (2과목). 아래 T1 테이블의 SQL실행 후 결괏값을 작성하시오.
+[T1]
+COL1    COL2    COL3
+--------------------
+10      NULL     10
+NULL    50       10
+0       10       10
+
+[SQL]
+ㄱ. SELECT SUM(col2) FROM T1;
+ㄴ. SELECT SUM(col2) FROM T1 WHERE col1 > 0;
+ㄷ. SELECT SUM(col2) FROM T1 WHERE col1 IS NOT NULL;
+ㄹ. SELECT SUM(col2) FROM T1 WHERE col1 IS NULL;
+( ㄱ ) 
+( ㄴ ) 
+( ㄷ ) 
+( ㄹ ) 
+정답확인
+
+
+문제 23.
+48회 단답형 2 (2과목). ORDER BY 한 결과로 3번째 오는 값을 작성하시오.
+[TAB1]
+ID
+----
+1
+2
+3
+4
+
+
+[SQL]
+SELECT ID FROM TAB1
+ORDER BY (CASE WHEN ID IN(1, 3) THEN ID*3 ELSE ID END) DESC;
+✏️정답확인
+
+
+문제 24.
+48회 단답형 3 (2과목). 아래의 SQL문 실행 결과를 작성하시오.
+[TAB1]
+
+COL1     COL2
+-------------
+1         1
+2
+3         1
+4         1
+5         2
+6         2
+7         3
+8         4
+
+[SQL]
+SELECT COUNT(*) FROM TAB1
+WHERE COL1 <> 4
+START WITH COL1 = 2
+CONNECT BY PRIOR COL1 = COL2;
+✏️
+ 정답확인
+
+
+문제 25.
+48회 단답형 4 (2과목). 주어진 테이블에 대해서 아래와 같은 결과가 나오도록 SQL빈칸(   ?   )을 완성하시오.
+[EMPLOYEES]
+EMPLOYEE_ID   DEPARTMENT_ID   LAST_NAME   SALARY
+------------------------------------------------
+107               60           Lorentz    4200.00
+106               60           Pataballa  4800.00
+105               60           Austin     4800.00
+104               60           Ernst      6000.00
+103               60           Hunold     9000.00
+102               90           De Haan    17000.00
+101               90           Kochhar    17000.00
+100               90           King       24000.00
+109               100          Faviet     9000.00
+108               100          Greenberg  12000.00
+201               200          ALEX       8000
+202               200          SMITH      7000
+
+[결과]
+EMPLOYEE_ID  DEPARTMENT_ID  LAST_NAME  SALARY  BEFORE_SALARY
+------------------------------------------------------------
+107             60           Lorentz   4200.00
+106             60           Pataballa 4800.00
+105             60           Austin    4800.00    4200
+104             60           Ernst     6000.00    4800
+103             60           Hunold    9000.00    4800
+102             90           De Haan   17000.00
+101             90           Kochhar   17000.00
+100             90           King      24000.00   17000
+109             100          Faviet    9000.00
+108             100          Greenberg 12000.00
+[SQL]
+
+SELECT EMPLOYEE_ID,
+       DEPARTMENT_ID,
+       LAST_NAME,
+       SALARY,
+       ( ? )(SALARY, 2)
+       OVER(PARTITION BY DEPARTMENT_ID ORDER BY SALARY)
+       AS BEFORE_SALARY
+FROM EMPLOYEES
+WHERE EMPLOYEE_ID < 110;
+✏️정답확인
+
+
+문제 26.
+48회 단답형 5 (2과목). Oracle 에서 USER1 에게 STUDENT_T 테이블의 INSERT 권한을 부여할 때 명령어로 아래 빈칸(  ㄱ  ), (  ㄴ  ), (  ㄷ  ) 을 작성하시오.
+(  ㄱ  ) INSERT ( ㄴ ) STUDENT_T ( ㄷ ) USER1;
+( ㄱ ) 
+( ㄴ ) 
+( ㄷ ) 
+정답확인
+
+
+문제 27.
+49회 단답형 1 (1과목). 두 개의 엔터티간 관계에서 참여자의 수를 표현하는 것을 무엇이라 하는가?
+ 
+✏️정답확인
+
+
+문제 28.
+49회 단답형 2 (2과목). 다른 테이블에서 파생된 테이블로, 물리적 데이터가 저장되는 것이 아닌 논리적으로 존재하는것을 무엇이라고 하는가?
+ 
+✏️정답확인
+
+
+문제 29.
+49회 단답형 3 (2과목). 아래의 SQL 결과를 작성하시오.
+[TAB1]
+
+ID     COL1
+-----------
+A      1
+A      2
+B      3
+B      4
+C      5
+C      6
+C      7
+D      8
+
+[SQL]
+SELECT COUNT(*)
+FROM TAB1
+GROUP BY ID
+HAVING COUNT(*) > 2;
+✏️정답확인
+
+
+문제 30-1.
+49회 단답형 4 (2과목). 아래의 SQL결과가 나올 수 있도록 빈칸을 채우시오.
+ 
+[TAB1]
+C1   C2   C3
+-------------
+1         A
+2    1    B
+3    1    C
+4    2    D
+
+[RESULT]
+C3   C1
+-------
+A    1
+C    3
+B    2
+D    4
+
+[SQL]
+SELECT C3, C1
+FROM TAB1
+START WITH C2 (  ?  )
+CONNECT BY PRIOR C1 = C2
+ORDER SIBLINGS BY C3 DESC;
+✏️정답확인
+
+문제 30-2.
+아래의 SQL결과가 나올 수 있도록 빈칸을 채우시오.
+[EMP]
+EMPNO  ENAME  EDATE       MANAGER
+--------------------------------
+001    김사원   2021-01-01  NULL
+002    이사원   2021-01-01  001
+003    삼사원   2022-01-01  001
+004    사사원   2022-01-01  001
+005    오사원   2022-01-01  NULL
+006    육사원   2023-01-01  005
+007    나사원   2023-01-01  005
+
+[RESULT]
+EMPNO  ENAME    EDATE      MANAGER
+----------------------------------
+001    김사원    2021-01-01    NULL
+003    삼사원    2022-01-01    001
+004    사사원    2022-01-01    001
+005    오사원    2022-01-01    NULL
+
+[SQL]
+SELECT EMPNO, ENAME, EDATE, MANAGER
+FROM EMP
+START WITH MANAGER (  ?  )
+CONNECT BY PRIOR EMPNO = MANAGER
+AND EDATE BETWEEN '2022-01-01' AND '2022-12-31'
+ORDER SIBLINGS BY EMPNO;
+✏️정답확인
+ 
+
+
+문제 31.
+49회 단답형 5 (2과목). 아래의 결과[RESULT]를 얻기 위한 SQL문에서 빈칸(  ㄱ  )에 들어갈 함수를 작성하시오.
+[RESULT]
+구매고객   구매월    총 구매건    총 구매액
+-----------------------------------
+AAA      202301      1       1000
+AAA      202302      2       3000
+AAA      202303      1       1000
+AAA                  4       5000
+BBB      202301      3       2000
+BBB      202302      5       3000
+BBB      202303      1       2000
+BBB                  9       7000
+CCC      202301      1       2000
+CCC      202302      1       5000
+CCC      202303      1       1000
+CCC                  3       8000
+                     16      20000
+                     
+[SQL]
+SELECT 구매고객, 구매월, COUNT(*) "총 구매건", SUM(구매금액) "총 구매액"
+FROM 구매이력
+GROUP BY (   ㄱ   ) (구매고객, 구매월)
+✏️정답확인
+
+
+문제 32.
+49회 단답형 6 (2과목).  아래 SQL결과의 빈칸(  ㄱ  ), (  ㄴ  ) 을 작성하시오. 
+[TAB1]
+COL1  COL2
+----------
+1      A
+2      B
+3      B
+4      C
+5      C
+6      C
+7      D
+
+[SQL]
+SELECT NT, COUNT(*)
+FROM (SELECT NTILE(3) OVER (ORDER BY COL1) AS NT
+      FROM TAB1)
+WHERE 1=1
+GROUP BY NT
+ORDER BY 1;
+ 
+[RESULT]
+
+  NT     COUNT(*)
+( ㄱ )    ( ㄴ )
+  2         2
+  3         2
+(ㄱ) (ㄴ)정답확인
+
+ 
+
+
+
+ 
+
+1. 정답 :  속성 (ATTRIBUTE)
+📖문제확인
+ 
+
+
+2. 정답 :  제2정규형
+📖문제확인
+ 
+
+
+3. 정답 :  CROSS JOIN
+📖문제확인
+ 
+ 
+해설:
+SQL> SELECT*FROM A;
+
+	C1
+----------
+	 1
+	 2
+
+SQL> SELECT*FROM B;
+
+	C1
+----------
+	 2
+
+SQL> SELECT*FROM A, B;
+
+	C1	   C1
+---------- ----------
+	 1	    2
+	 2	    2
+
+SQL> SELECT*FROM A CROSS JOIN B;
+
+	C1	   C1
+---------- ----------
+	 1	    2
+	 2	    2
+CROSS JOIN(상호 조인)한쪽 테이블의 모든 행과 다른 쪽 테이블의 모든 행을 조인시킨다.상호 조인 결과의 전체 행 개수는 두 테이블의 각 행의 개수를 곱한 값이 되며 카테시안 곱(CARTESIAN PRODUCT)라고 함.
+
+
+4. 정답 :  C
+📖문제확인
+ 
+해설: C1이 같은 레벨에서 DESC로 정렬됨
+
+
+5. 정답 :  KING
+📖문제확인
+ 
+해설: C1 = PRIOR C2 역방향
+
+
+6. 정답 : DCL (데이터 제어어)
+📖문제확인
+ 
+데이터 제어어 (DCL : Data Control Language) 
+- 데이터베이스에 접근하고 객체들을 사용하도록 권한(GRANT)을 주고 회수(REVOKE)하는 명령어
+
+
+7. 정답 :  3, 2
+📖문제확인
+ 
+해설: NTILE(3)은 데이터를 3등분 하고, 각 등분에 대해서 COUNT를 계산하므로 3, 3, 2가 된다.
+[RESULT]
+NTILE_3   ROWCNT
+----------------
+  1          3
+  2          3
+  3          2
+
+
+8. 정답 :  RANGE
+📖문제확인
+ 
+해설: +0 ~ +50 사이의 값이 COUNT 결과로 나타남
+SQL> SELECT V1, N1, COUNT(N1) OVER (ORDER BY N1 RANGE BETWEEN 0 PRECEDING AND 50 FOLLOWING) AS CNT FROM SQLD45;
+
+V1    N1    CNT
+-----------------
+E     50     2
+A     100    2
+B     150    1
+D     450    1
+C    1400    1
+
+
+9. 정답 :  3
+📖문제확인
+ 
+해설: 200 이상이 3개 이므로 3 
+
+
+10. 정답 :  3
+📖문제확인
+ 
+해설: 두번째 자리의 문자가 L인 모든 행을 출력
+SQL> SELECT COUNT(*) FROM SQLD45 WHERE V1 LIKE '_L%';
+
+  COUNT(*)
+----------
+	 3
+
+
+11. 정답 :  도메인
+📖문제확인
+ 
+
+
+12. 정답 :  유일성
+📖문제확인
+ 
+해설:
+유일성 - 주식별자는 모든 인스턴스를 유일하게 구분가능 해야한다.최소성 - 주식별자를 구성하는 속성 수는 1개이어야 한다.불변성 - 주식별자는 자주 변경되지 않아야 한다.존재성 - 주식별자는 항상 데이터 값이 있어야 한다.대표성 - 주식별자는 엔터티를 대표 할 수 있어야 한다.
+
+
+13. 정답 :  2
+📖문제확인
+ 
+SQL> SELECT AVG(COL1), AVG(NVL(COL1, 0)) FROM TAB1;
+
+ AVG(COL1) AVG(NVL(COL1,0))
+---------- ----------------
+	 6		  4
+
+
+SQL> SELECT AVG(COL1) - AVG(NVL(COL1, 0)) FROM TAB1;
+
+AVG(COL1)-AVG(NVL(COL1,0))
+--------------------------
+			 2
+
+
+14-1. 정답 :  RIGHT OUTER JOIN / RIGHT JOIN
+📖문제확인
+ 
+해설: 사원이 오른쪽에 위치해 있으므로 RIGHT OUTER JOIN (OUTER 생략 가능)
+
+
+
+14-2. 정답 :  LEFT OUTER JOIN / LEFT JOIN
+📖문제확인
+ 
+
+14-3. 정답 :  RIGHT OUTER JOIN / RIGHT JOIN
+📖문제확인
+ 
+
+
+15. 정답 :  GROUPING SETS(B.GRADE, (B.GRADE, A.JOB))
+📖문제확인
+ 
+해설:
+SELECT B.GRADE, A.JOB, SUM(B.GRADE) FROM TAB1 A, TAB2 B GROUP BY GROUPING SETS(B.GRADE, (B.GRADE, A.JOB));
+
+     GRADE	  JOB SUM(B.GRADE)
+---------- ---------- ------------
+	50	   10		50
+	50	   20		50
+	50	   30		50
+	50		       150
+	60	   10		60
+	60	   20		60
+	60	   30		60
+	60		       180
+	70	   10		70
+	70	   20		70
+	70	   30		70
+	70		       210
+
+12 rows selected.
+
+
+16. 정답 :  제2정규형
+📖문제확인
+ 
+
+
+17. 정답 :  외부스키마
+📖문제확인
+ 
+
+
+- 외부 스키마(External Schema) - 서브 스키마, 사용자 뷰
+
+1. 외부 스키마는 사용자나 응용 프로그래머가 개인의 입장에서 필요한 데이터베이스의 논리적 구조를 정의한다.
+2. 외부 스키마는 전체 데이터베이스의 한 논리적인 부분으로 볼 수 있기 때문에 서브 스키마라고도 한다.
+3. 하나의 데이터베이스 시스템에는 여러 개의 외부 스키마가 존재할 수 있다.
+4. 하나의 외부 스키마를 여러개의 응용 프로그램 혹은 사용자가 공유할 수 있다.
+5. 일반 사용자는 SQL과 같은 질의어를 이용하여 DB를 쉽게 사용할 수 있다.
+6. 응용 프로그래머는 C나 JAVA 등의 언어를 사용하여 DB에 접근한다.
+
+- 개념 스키마(Conceptual Schema) - 전체적인 뷰
+
+1. 개념 스키마는 데이터베이스의 전체적인 논리적 구조로, 모든 응용 프로그램이나 사용자들이 필요로 하는 데이터를 종합한 조직 전체의 데이터베이스로 하나만 존재한다.
+2. 개념 스키마는 개체 간의 관계(Relationship)와 제약 조건을 나타내고 데이터베이스의 접근 권한, 보안 및 무결성 규칙에 관한 명세를 정의한다.
+3. 데이터베이스 파일에 저장되는 데이터의 형태를 나타내는 것으로, 단순히 스키마라고 하면 개념 스키마를 의미한다.
+4. 기관이나 조직체의 관점에서 데이터베이스를 정의한 것이다.
+5. DBA에 의해서 구성된다.
+
+- 내부 스키마(Internal Schema) - 시스템 설계자 뷰
+
+1. 내부 스키마는 물리적인 저장장치 입장에서 데이터가 저장되는 방법을 기술한 것이다.
+2. 내부 스키마는 실제 데이터베이스에 저장될 레코드의 물리적인 구조를 정의한다. 
+3. 내부 스키마는 저장 데이터 항목의 표현방법, 내부 레코드의 물리적 순서, 인덱스 유/무 등을 나타낸다.
+4. 시스템 프로그래머나 시스템 설계자가 관리한다.
+
+
+18. 정답 :  CASCADE
+📖문제확인
+ 
+
+
+19. 정답 :  GROUP BY
+📖문제확인
+ 
+
+
+20. 정답 :  5, 4
+📖문제확인
+ 
+
+
+21. 정답 :  4
+📖문제확인
+ 
+ 
+해설:
+<답> 2 null 은 제외된 상태에서 수행되며, 그 결과에서 4 인 row 를 제외
+위의 샘플 예제로 1 에서 시작된 결과는 1,3,4,7,8 / 5개의 rows 에서 COL1<>4를 제외한 4개
+
+
+22. 정답 :  60, NULL, 10, 50
+📖문제확인
+ 
+ 
+ 
+ 
+
+
+23. 정답 :  1
+📖문제확인
+ 
+SQL> SELECT ID FROM TAB1 ORDER BY (CASE WHEN ID IN(1, 3) THEN ID*3 ELSE ID END) DESC;
+
+  ID
+------
+ 3
+ 4
+ 1
+ 2
+
+
+24. 정답 :  3
+📖문제확인
+ 
+
+
+25. 정답 :  LAG
+📖문제확인
+ 
+해설: LAG 함수는 이전 행의 값을 반환하는 함수로 LAG(SALARY, 2) => 이전 두 번째 행값을 출력한다.
+ 
+LAG    : 이전 행의 값을 리턴
+LEAD  : 다음 행의 값을 리턴
+ 
+
+
+26. 정답 :  GRANT, ON, TO
+📖문제확인
+ 
+ 
+ 
+해설:
+GRANT : 권한부여 ( GRANT [권한] ON [테이블] TO [유저] )
+REVOKE : 권한회수 (REVOKE [권한] ON [테이블] FROM [유저] )
+
+
+27. 정답 :  관계차수 (Cardinality)
+📖문제확인
+ 
+
+
+28. 정답 :  VIEW (뷰)
+📖문제확인
+ 
+
+
+29. 정답 :  3
+📖문제확인
+ 
+ 
+해설: ID, COUNT(*) 결과를 HAVING조건절 체크한 최종결과는 '3'
+SQL> SELECT COUNT(*) FROM TAB1 GROUP BY ID HAVING COUNT(*) > 2;
+
+  COUNT(*)
+----------
+	 3
+
+
+30-1. 정답 :  IS NULL
+📖문제확인
+ 
+
+30-2. 정답 :  IS NULL
+📖문제확인
+ 
+
+
+31. 정답 :  ROLLUP
+📖문제확인
+ 
+
+
+32. 정답 :  1, 3
+📖문제확인
+ 
+ 
+
+*해당 포스팅은 문제유형을 참고하여 비슷한 문제들로 재구성 하였으니 참고용으로 봐주세요 :) 
+오타, SQL에러 댓글 남겨주시면 감사하겠습니다. 🙏🏻

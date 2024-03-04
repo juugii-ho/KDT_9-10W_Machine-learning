@@ -1,0 +1,1682 @@
+
+📖SQLD. 제 33 회 기출 문제
+
+
+문제 1. 아래 설명을 만족하는 가장 적절한 파티션 분할 기법을 작성하시오. 
+
+대상 테이블이 날짜 또는 숫자 값으로 분리가 가능하고 각 영역별로 트랜잭션이 분리된다.
+데이터 보관 주기에 따라 테이블에 데이터를 쉽게 지우는 것이 가능하다.
+✏️ 정답확인🌼
+
+ 
+
+문제 2. 속성의 분류 중 속성의 특성에 따른 분류로 알맞은 것은? 정답확인🌼
+ 
+
+
+
+
+1) 기본 속성, 일반 속성, 파생 속성2) 기본 속성, 설계 속성, 파생 속성3) 기본 속성, 설계 속성, 일반 속성4) 일반 속성, 설계 속성, 파생 속성
+
+
+
+
+ 
+
+문제 3. 속성의 분류 중 엔티티를 구성하는 방식에 따른 분류로 알맞은 것은? 정답확인🌼
+ 
+
+
+
+
+1) 기본 속성2) 일반 속성3) 설계 속성4) 파생 속성
+
+
+
+
+
+문제 4. 다음 주어진 그림에 해당하는 ERD 표기법으로 알맞은 것은? 정답확인🌼
+ 
+
+
+
+
+
+1) Barker2) IE3) UML4) IDEFIX
+
+
+
+
+ 
+
+문제 5. 식별자 와 비식별자 관계에 대한 설명으로 부적절한 것은? 정답확인🌼
+ 
+
+
+
+
+1) 식별자 관계는 강한 관계, 비식별자 관계는 약한 관계를 가진다.2) 식별자 관계는 상속받은 주식별자 속성을 타 엔티티에 이전이 필요하고 비식별자 관계는 차단이 필요하다.3) 식별자 관계는 실선으로, 비식별자 관계는 점선으로 표시한다.4) 식별자 관계는 자식 엔티티의 기본키가 부모 엔티티에 대해 독립적으로 구성되고 비식별자 관계에서는 종속적으로 구성된다.
+
+
+
+
+ 
+
+문제 6. 3차 정규화에 대한 설명으로 알맞은 것은? 정답확인🌼
+
+
+
+
+1) 속성의 중복 값을 제거한다.2) 복합 인스턴스에 대해 각 인스턴스의 종속성 중복을 제거한다.3) 다치종속성을 제거한다.4) 일반 속성의 종속성을 제거한다.
+
+
+
+
+ 
+
+문제 7. 다음 주어진 ERD 에 대한 설명으로 알맞은 것은? 정답확인🌼
+
+
+
+
+1) 고객 정보가 없는 주문이 있을 수 있다. (고객 정보가 없을 수도 있다.)2) 계약 테이블은 주문 테이블의 데이터 값을 모두 가져야 한다.3) 주문 테이블은 반드시 청약 정보를 가져야 한다.4) 계약은 계약 그룹에 속해 있지 않을 수 있다. (계약 정보가 없을 수도 있다.)
+
+
+
+
+ 
+
+문제 8. 고객, 고객 로그인 내역 테이블에서 고객의 10퍼센트는 로그인 내역을 확인하고 로그인 내역은 3년동안 보관하고 삭제해야 한다. 아래의 설명 중 가장 적절한 것은? 정답확인🌼
+
+
+
+
+1) 기본키(Primary Key)에 대한 인덱스를 추가한다.2) 외래키(Foreign Key)에 대한 인덱스는 추가하지 않아도 된다.3) 기간을 Range 파티션한다.4) Hash 파티션을 수행한다.
+
+
+
+
+ 
+
+문제 9. 다음 중 보기의 테이블을 설계할 사항으로 가장 적절한 것은? 정답확인🌼
+
+- 개인 고객과 법인 고객이 있고 각 고객 데이터는 공통 속성을 가지고 있다.
+- 각각의 고객 데이터에서만 사용되는 개별 속성도 있다.
+- 로그인 관리는 동일하게 관리된다.
+- 법인 고객과 개인 고객 중 개인 고객의 비율이 98%를 차지한다.
+- 개인 고객에 대한 사용이 압도적으로 많다.
+
+
+
+1) 통합하여 하나의 테이블을 만든다. (All in One)2) 공통 속성을 중복으로 두어 슈퍼-서브 타입으로 한다. (슈퍼-서브타입)3) 공통 속성을 별도로 두고 개인 고객과 법인 고객도 별도의 테이블로 생성한다. (1:1)4) 위 보기 모두 성능 조절을 위한 방법으로 부적절한다.
+
+
+
+
+ 
+
+문제 10. 조인이 복잡한 여러 테이블이 존재할 경우 해당 테이블들을 반정규화 하려고 할 때 가장 적절한 반정규화 기법은? 정답확인🌼
+
+
+
+
+1) 중복 관계 추가2) 파생 칼럼 추가3) 통계 테이블 추가4) 기본키에 의한 칼럼 추가
+
+
+
+
+ 
+
+문제 11. 다음 보기 중 서브 쿼리에 대한 설명으로 옳지 않은 것은? 정답확인🌼
+
+
+
+
+1) 메인 쿼리에서 서브 쿼리의 결과 칼럼을 사용할 수 있다.2) 서브 쿼리에서는 ORDER BY를 사용하지 못한다.3) 서브 쿼리는 단일 행(Single Row) 또는 복수 행(Multi Row) 비교 연산자와 함께 사용할 수 있다.4) 메인 쿼리 레벨이 1이고 서브 쿼리가 M이면 항상 메인 쿼리 레벨1로 결과 집합이 생성된다.
+
+
+
+
+ 
+
+문제 12. 주어진 테이블에서 아래와 같은 결과를 반환하는 SQL문을 고르시오.  정답확인🌼
+[SQLD_33_12]
+DNAME      YEAR     SAL
+------------------------
+경영지원부    2010     4900
+경영지원부    2011     5000
+경영지원부    2012     5100
+인사부       2010     4800
+인사부       2011     4900
+인사부       2012     5000
+
+[RESULT]
+DNAME      YEAR     SUM(SAL)
+----------------------------
+인사부       2010     4800
+인사부       2011     4900
+인사부       2012     5000
+인사부                14700
+경영지원부    2010     4900
+경영지원부    2011     5000
+경영지원부    2012     5100
+경영지원부             15000
+                    29700
+ 
+
+1)
+SELECT DNAME, YEAR, SUM(SAL)
+FROM SQLD_33_12
+GROUP BY ROLLUP((DNAME, YEAR), NULL);
+
+2)
+SELECT DNAME, YEAR, SUM(SAL)
+FROM SQLD_33_12
+GROUP BY ROLLUP(DNAME, (DNAME, YEAR));
+
+3)
+SELECT DNAME, SUM(SAL)
+FROM SQLD_33_12
+GROUP BY ROLLUP((DNAME, YEAR));
+
+4)
+SELECT DNAME, SUM(SAL)
+FROM SQLD_33_12
+GROUP BY ROLLUP(DNAME, YEAR, (DNAME, YEAR));
+
+ 
+
+문제 13. 다음 보기 중 숫자형 함수의 결과 값으로 올바른 것은? 정답확인🌼
+
+1) SELECT FLOOR(35.8) FROM DUAL; 
+결과 → 36
+
+2) SELECT CEIL(35.8) FROM DUAL;
+결과 → 36
+
+3) SELECT ROUND(36.8, 9) FROM DUAL;
+결과 → 36
+
+4) SELECT TRUNC(35.8) FROM DUAL;
+결과 → 36
+
+ 
+ 
+ 
+
+문제 14. 다음 보기 중 SQL문의 실행 순서로 올바른 것을 고르시오. 정답확인🌼
+ 
+
+
+
+1) FROM - WHERE - GROUP BY - HAVING - ORDER BY - SELECT2) FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY3) FROM - WHERE - HAVING - GROUP BY - ORDER BY - SELECT4) FROM - WHERE - GROUP BY - SELECT - HAVING - ORDER BY
+
+
+
+ 
+
+문제 15. 오라클 환경에서 날짜형 데이터를 다룰 경우 아래 SQL문의 결과로 가장 적절한 것은?  정답확인🌼
+SELECT TO_CHAR(TO_DATE('2015.01.10 10', 'YYYY.MM.DD HH24')
+       +1/24/(60/10),'YYYY.MM.DD HH24:MI:SS')
+FROM DUAL;
+
+
+
+1) 2015.01.10 11:01:002) 2015.01.10 10:05:003) 2015.01.10 10:10:004) 2015.01.10 10:30:00
+
+
+
+ 
+
+문제 16. 아래 SQL 문장 실행 순서로 알맞은 것은?  정답확인🌼
+1. Nested Loops
+2.     Hash Join
+3.              TABLE ACCESS (FULL) TAB1
+4.              TABLE ACCESS (FULL) TAB2
+5.     TABLE ACCESS (BY ROWID) TAB3
+6.              INDE (UNIQUE SCAN) PK_TAB3
+
+
+
+
+1) 3, 4, 2, 6, 5, 12) 1, 2, 3, 4, 5, 63) 3, 4, 6, 2, 5, 14) 3, 4, 2, 1, 6, 5
+
+
+
+
+ 
+ 
+
+문제 17. 명시적 커서에서 FETCH 단계 이후 수행되는 것은 무엇인가?정답확인🌼
+
+
+
+
+1) CURSOR DEFINE2) OPEN CURSOR3) CLOSE CURSOR4) EXIT
+
+
+
+
+ 
+
+문제 18. 아래 팀 별 성적 테이블에서 승리 건수가 높은 순으로 3위까지 출력하되 3위의 승리 건수가 동일한 팀이 있다면 함께 출력하는 문장으로 알맞은 것은? 정답확인🌼
+ 
+[TABLE : 팀별성적]
+팀명     승리건수       패배건수
+---------------------------
+A팀      120          80
+B팀      20           180
+C팀      10           190
+D팀      100          100
+E팀      110          90
+F팀      100          100
+G팀      70           130
+1)                               3)
+SELECT TOP(3) 팀명, 승리건수         SELECT 팀명, 승리건수     
+FROM 팀별성적                       FROM 팀별성적
+ORDER BY 승리건수 DESC;             WHERE ROWNUM <= 3
+                                  ORDER BY 승리건수 DESC;
+                                  
+2)                               4)
+SELECT TOP(3) 팀명, 승리건수         SELECT TOP(3) WITH TIES 팀명, 승리건수     
+FROM 팀별성적;                      FROM 팀별성적
+                                  ORDER BY 승리건수 DESC;
+ 
+
+문제 19. 다음 보기 중 세번째 문자가 'N'인 문자열을 검색하는 조건으로 적절한 것은? 정답확인🌼
+ 
+1) SELECT*FROM 테이블명 WHERE like LIKE 'N%';
+
+2) SELECT*FROM 테이블명 WHERE like '%N%';
+
+3) SELECT*FROM 테이블명 WHERE like '[__N]%';
+
+4) SELECT*FROM 테이블명 WHERE like '__N%';
+
+ 
+문제 20. 다음 보기에서 Hash Join의 순서로 옳은 것은? 정답확인🌼
+가) 선행 테이블에서 주어진 조건을 만족하는 레코드를 필터링한다.
+나) 선행 테이블의 조인 키를 기준으로 해시 함수를 적용하여 해시 테이블을 생성한다.
+다) 1번, 2번 작업을 선행 테이블에서 조건을 만족하는 모든 행을 수행한다.
+라) 후행 테이블에서 주어진 조건을 만족하는 레코드를 필터링한다.
+마) 후행 테이블의 조인 키를 기준으로 해시 함수를 적용하여 선행 테이블에서 해시 함수 반환값과 같은 값을 반환하는 해당 버킷을 찾는다.
+
+
+
+1) 가-나-다-라-마2) 가-나-라-마-다3) 나-가-마-라-다4) 가-라-나-마-다
+
+
+
+ 
+
+문제 21. 다음 보기 중 결과값이 다른 SQL문은 무엇인가?정답확인🌼
+ 
+[SQLD_33_21]
+고객     거래내역
+--------------
+철수      100
+민정
+아름      300
+예진
+1) SELECT NULL*2 FROM SQLD_33_21;
+
+2) SELECT NULL*3 FROM SQLD_33_21;
+
+3) SELECT NULL*NULL FROM SQLD_33_21;
+
+4) SELECT COUNT(고객) FROM SQLD_33_21 WHERE 거래내역 IS NULL;
+ 
+
+문제 22. 다음 주어진 SQL문과 동일한 결과값을 반환 하는 SQL문은 무엇인가? 정답확인🌼
+[SQL]
+
+SELECT * FROM SQLD_33_22
+WHERE (COL1 = 1 AND COL2 = 3)
+OR (COL1 = 1 AND COL2 = 4);
+
+1) SELECT*FROM SQLD_33_22
+   WHERE COL1 IN (1, 3) AND COL2 IN (1, 4);
+
+2) SELECT*FROM SQLD_33_22
+   WHERE COL1 IN (1, 3) OR COL2 IN(1, 4);
+
+3) SELECT*FROM SQLD_33_22
+   WHERE COL1 = 1 OR (COL2 = 3 OR COL2 = 4);
+
+4) SELECT*FROM SQLD_33_22
+   WHERE COL1 = 1 AND (COL2 = 3 OR COL2 = 4);
+ 
+문제 23. 다음 주어진 테이블에서 아래의 SQL을 수행하였을 때의 결과가 아래와 같을 때 결과에서 빈칸에 들어갈 MGR_SUM 값으로 알맞은 것을 고르시오.  정답확인🌼
+[SQLD_33_23]
+
+MGR   ENAME   HIREDATE   SAL
+-----------------------------
+유비    관우      2017    1000
+유비    장비      2018    1500
+유비    제갈량     2015    2000
+조조    하후돈     2016    2000
+조조    하후연     2017    3500
+조조    순욱      2015    3000
+손권    주유      2015    2500
+손권    황개      2019    3000
+손권    노숙      2013    2000
+[SQL]
+
+SELECT MGR, ENAME, HIREDATE, SAL,
+   SUM(SAL) OVER(PARTITION BY MGR 
+            ORDER BY HIREDATE
+            ROWS BETWEEN 1 PRECEDING
+            AND 1 FOLLOWING) AS MGR_SUM
+    FROM SQLD_33_23;
+[RESULT]
+
+MGR   ENAME   HIREDATE   SAL   MGR_SUM
+---------------------------------------
+손권    노숙      2013    2000  (       )
+손권    주유      2015    2500  (       )
+손권    황개      2019    3000  (       )
+유비    제갈량     2015    2000  (       )
+유비    관우      2017    1000  (       )
+유비    장비      2018    1500  (       )
+조조    순욱      2015    3000  (       )
+조조    하후돈     2016    2000  (       )
+조조    하후연     2017    3500  (       )
+
+
+
+1) 2000, 2500, 3000, 2000, 1000, 1500, 3000, 2000, 35002) 4500, 7500, 5500, 3000, 4500, 2500, 5000, 8500, 55003) 2000, 4500, 7500, 2000, 3000, 4500, 3000, 5000, 85004) 4500, 7500, 7500, 3000, 4500, 4500, 5000, 8500, 8500
+
+
+
+ 
+
+문제 24. 다음 주어진 SQL문을 수행하였을 때 영구적으로 반영되는 것은 무엇인가? 정답확인🌼
+[SQL]
+INSERT INTO SQLD_33_24 VALUES(1);
+INSERT INTO SQLD_33_24 VALUES(2);
+SAVEPOINT SV1;
+UPDATE SQLD_33_24 SET COL1 = 7 WHERE COL1 = 2;
+INSERT INTO SQLD_33_24 VALUES(9);
+SAVEPOINT SV2;
+DELETE SQLD_33_24 WHERE COL1 = 7;
+INSERT INTO SQLD_33_24 VALUES(11);
+SAVEPOINT SV3;
+INSERT INTO SQLD_33_24 VALUES(9);
+ROLLBACK TO SV2;
+COMMIT;
+
+
+
+1) 1, 22) 1, 9, 113) 1, 9, 11, 94) 1, 7, 9
+
+
+
+ 
+
+문제 25. 다음 보기 중 B-tree 인덱스에 대한 설명으로 알맞은 것은?  정답확인🌼
+
+
+
+1) 인덱스의 리프 데이터가 곧 데이터 페이지다.2) 브랜치 블록과 리프 블록으로 구성되며 브랜치 블록은 분기를 목적으로 하고 리프 블록은 인덱스를 구성하는 칼럼의 값으로 정렬된다.3) 하나의 인덱스 키 엔트리가 많은 행에 대한 포인터를 저장하는 구조이다.4) 시스템에서 사용될 질의를 시스템 구현 시에 모두 알 수 없는 경우인 DW 및 AD-HOC 질의 환경을 위해 설계되었다.
+
+
+
+ 
+
+문제 26. HASH JOIN에 대한 설명으로 옳지 않은 것은?  정답확인🌼
+
+
+
+1) 동등 조인 이외에서도 사용할 수 있다.2) 데이터 건수가 적은 테이블을 선행 테이블로 두는 것이 유리하다.3) 조인 칼럼의 인덱스가 존재하지 않을 경우에도 사용할 수 있다.4) 자연 조인 시 드라이빙 집합쪽으로 조인 액세스양이 많아 Random 액세스 부하가 심할 때 유리하다.
+
+
+
+ 
+
+문제 27. 다음 보기 중 ROLE에 대한 설명으로 알맞은 것은?  정답확인🌼
+
+
+
+1) 다양한 유저에게 다양한 권한을 효율적으로 관리하기 위한 '명령어' 이다.2) ROLE은 DBA 권한을 가진 유저에 의해서 생성된다.3) ROLE은 GRANT 명령어로 부여하고 REVOKE 명령어로 회수할 수 있다.4) 여러 사용자에게는 서로 다른 ROLL을 부여해야 한다.
+
+
+
+ 
+
+문제 28. 데이터베이스를 정의하고 접근하기 위해서는 데이터베이스 관리 시스템과의 통신 수단이 필요한데 이를 데이터 언어(Data Language) 라고 하며 그 기능과 사용 목적에 따라 데이터 정의어(DDL), 데이터 조작어(DML), 데이터 제어어(DCL)로 구분된다. 다음 중 데이터 언어와 SQL 명령어에 대한 설명으로 가장 부적절 한 것은? 정답확인🌼
+
+
+
+1) 비절차적 데이터 조작어(DML)는 사용자가 무슨 데이터를 원하며, 어떻게 그것을 접근해야 되는지를 명세하는 언어이다.2) DML은 데이터베이스 사용자가 응용 프로그램이나 질의어를 통하여 저장된 데이터베이스를 실질적으로 접근하는데 사용되며 SELECT, INSERT, DELETE, UPDATE 등이 있다.3) DDL은 스키마, 도메인, 테이블, 뷰, 인덱스를 정의하거나 변경 또는 제거 할 때 사용되며 CREATE, ALTER, DROP, RENAME 등이 있다.4) 호스트 프로그램 속에 삽입되어 사용되는 DML 명령어들을 데이터 부속어(Data Sub Language)라고 한다.
+
+
+
+ 
+
+문제 29. 다음 아래의 SQL문을 표준 ANSI SQL로 알맞게 바꾼 것은?(단, 조인 조건과 조회 조건은 분리한다.)  정답확인🌼
+SELECT * FROM SCOTT.EMP A, SCOTT.DEPT B
+WHERE A.DEPTNO = B.DEPTNO AND
+B.DNAME = 'SALES';
+1)                                   3)
+SELECT *                             SELECT *
+FROM SCOTT.EMP A LEFT OUTER JOIN     FROM SCOTT.EMP A INNER JOIN
+SCOTT.DEPT B                         SCOTT.DEPT B
+ON (A.DEPTNO = B.DEPTNO AND          ON (A.DEPTNO = B.DEPTNO AND
+    B.DNAME = 'SALES')                   B.DNAME = 'SALES')
+WHERE 1=1;                           WHERE 1=1;
+
+2)                                   4)
+SELECT *                             SELECT *
+FROM SCOTT.EMP A RIGHT OUTER JOIN     FROM SCOTT.EMP A INNER JOIN
+SCOTT.DEPT B                         SCOTT.DEPT B
+ON (A.DEPTNO = B.DEPTNO AND          ON A.DEPTNO = B.DEPTNO
+    B.DNAME = 'SALES')               WHERE 1=1 AND
+WHERE 1=1;                           B.DNAME = 'SALES'
+ 
+
+문제 30. 주어진 테이블에 대해서 아래의 SQL문을 수행하였을 때 총 몇개의 행(ROW)을 반환하는가? 정답확인🌼
+[SQLD_30_1]
+COL1    COL2
+------------
+1        2
+1        2
+1        3
+
+[SQLD_30_2]
+COL1    COL2
+------------
+1        2
+1        4
+1        5
+
+[SQL]
+SELECT DISTINCT COL1, COL2 FROM
+SQLD_30_1
+UNION ALL
+SELECT COL1, COL2 FROM SQLD_30_2;
+
+
+
+
+
+
+1) 2, 42) 53) 44) 2, 5
+
+
+
+
+
+
+ 
+
+문제 31. 아래의 계층형 SQL에서 리프 데이터이면 1, 그렇지 않으면 0을 반환하는 빈칸에 들어갈 키워드로 알맞은 것은? 정답확인🌼
+[SQL]
+SELECT LEVEL, 
+LPAD(' ',4*(LEVEL - 1)) || EMPNO,
+MGR, (          ) AS ISLEAF
+FROM SQLD_33_31
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR;
+
+
+
+1) CONNECT_BY_ISLEAF2) CONNECT_BY_ISCYCLE3) SYS_CONNECT_BY_PATH4) CONNECT_BY_ROOT
+
+
+
+
+ 
+문제 32. 다음 주어진 테이블에 대해서 아래의 SQL문을 수행하였을 때의 결과로 올바른 것은? 정답확인🌼
+[SQLD_32_1]
+N1   V1
+-------
+1    A
+2  
+3    B
+4    C
+
+[SQLD_32_2]
+N1   V1
+-------
+1    A
+2  
+3    B
+ 
+[SQL]
+SELECT SUM(A.N1)
+FROM SQLD_32_1 A,
+SQLD_32_2 B
+WHERE A.V1 <> B.V1;
+
+
+
+
+
+
+1) 102) 303) 124) 8
+
+
+
+
+
+
+ 
+
+문제 33. 서브 쿼리에 대한 설명으로 가장 올바르지 않은 것은? 정답확인🌼
+
+
+
+1) 서브 쿼리는 괄호로 감싸서 사용한다.2) 서브 쿼리는 비교 연산자와 함께 사용 가능하다.3) 메인 쿼리는 서브 쿼리의 칼럼을 쓸 수 없다.4) 서브 쿼리는 SELECT절, FROM절, WHERE절 등에서 사용 가능하다.
+
+
+
+ 
+
+문제 34. 아래의 실행 계획을 올바르게 설명한 것은?  정답확인🌼
+-----------------------------------------------------
+0 SELECT STATEMENT Optimizer = ALL_ROWS
+  (Cost=7 Card=9 Bytes=1k)
+1 0 HASH JOIN (Cost=7 Card=9 Bytes=1k)
+2 1   TABLE ACCESS (FULL) OF 'SCOTT.DEPT' (TABLE)
+      (Cost=3 Card=1 Bytes=30)
+3 1     VIEW(Cost=3 Card=9 Bytes=783)
+4 3       COUNT(STOPKEY)
+5 4         TABLE ACESS (FULL) OF 'SCOTT.EMP' (TABLE)
+            (Cost=3 Card=14 Bytes=1k)
+-----------------------------------------------------
+Predicate information (identified by opera-tion id);
+-----------------------------------------------------
+1 - access("A"."DEPTNO"="B"."DEPTNO")
+2 - filter("B"."DNAME"='SALES')
+4 - filter(ROWNUM < 10)
+-----------------------------------------------------
+
+
+
+1) DEMP TABLE에 대한 행 제한 구문이 있다.2) EMP TABLE과 DEPT TABLE은 OUTER JOIN으로 수행되고 있다.3) EMP TABLE과 DEPT TABLE에서 선행 테이블은 EMP TABLE이다.4) DEPT TABLE은 별도의 조건이 없어 FULL SCAN을 하고 있다.
+
+
+
+ 
+
+문제 35. 아래의 SQL문을 만족하는 결과를 가장 잘 설명한 것은? 정답확인🌼
+
+[EMP_A]
+ENO     MNO    SALARY
+----------------------
+A1      B1     400
+A2      B2     8000
+A3      B3     9000
+A4      B4     4000
+A5      B5     5000
+
+
+[EMP_B]
+ENO     MNO    SALARY
+----------------------
+B1      C1     2000
+B2      C2     7000
+B3      C3     10000
+B4      C4     3000
+B5      C5     6000
+
+[SQL]
+SELECT B. * FROM EMP_A A, EMP_B B
+WHERE A.MNO = B.ENO
+AND B.SALARY >= A.SALARY;
+
+
+
+1) 어떤 부하직원보다도 연봉이 높은 상사2) 어떤 부하직원보다도 연봉이 낮은 상사3) 어떤 상사보다도 연봉이 높은 부하 직원4) 어떤 상사보다도 연봉이 낮은 부하 직원
+
+
+
+
+ 
+문제 36. 다음 보기 중 데이터베이스 시스템 언어의 종류와 해당되는 명령어를 바르게 연결한 것을 2개 고르시오.  ✏️ 정답확인🌼
+
+
+
+1) DML - SELECT2) DML - ALTER3) DCL - DROP4) TCL - COMMIT
+
+
+
+ 
+
+문제 37. 다음 중 아래의 데이터 모델과 같은 테이블 및 기본키 (Primary Key) 제약조건을 생성하는 DDL 문장으로 올바른 것은?(DBMS 는 Oracle을 기준)  정답확인🌼
+[IE 표기법]                       [Barker 표기법]
+
+PRODUCT                          PRODUCT()
+PROD_ID: VARCHAR2(10)NOT NULL    # PROD_ID VARCHAR2(10)
+-----------------------------    * PROD_NM: VARCHAR2(100)
+PROD_NM: VARCHAR2(100)NOT NULL   * REG_DT DATE
+REG_DT: DATE NOT NULL            0 REGR_NO: NUMBER(10)
+REGR_NO: NUMBER(10) NULL
+1)                                    3)
+CREATE TABLE PRODUCT(                  CREATE TABLE PRODUCT(
+PROD_ID VARCHAR2(10) NOT NULL,         PROD_ID VARCHAR2(10) NOT NULL,
+PROD_NM VARCHAR2(100) NOT NULL,        PROD_NM VARCHAR2(100) NOT NULL,
+REG_DT DATE NOT NULL,                  REG_DT DATE NOT NULL,
+REGR_NO NUMBER(10) NULL);              REGR_NO NUMBER(10) NULL);
+
+ALTER TABLE PRODUCT ADD PRIMARY KEY
+PRODUCT_PK ON (PROD_ID);
+
+2)                                    4)
+CREATE TABLE PRODUCT(                  CREATE TABLE PRODUCT(
+PROD_ID VARCHAR2(10),                  PROD_ID VARCHAR2(10) NOT NULL,
+PROD_NM VARCHAR2(100),                 PROD_NM VARCHAR2(100) NOT NULL,
+REG_DT DATE,                           REG_DT DATE NOT NULL,
+REGR_NO NUMBER(10));                   REGR_NO NUMBER(10),
+                                       CONSTRAINT PRODUCT_PK PRIMARY KEY(PROD_ID));
+ALTER TABLE PRODUCT ADD CONSTRAINT
+PRODUCT_PK PRIMARY KEY (PROD_ID);
+ 
+문제 38. 아래 테이블 T, S, R이 각각 다음과 같이 선언되었다. 다음 보기 중 DELETE FROM T 쿼리를 수행한 후에 테이블 R에 남아있는 데이터로 가장 적절한 것은?  정답확인🌼
+CREATE TABLE T(
+C INTEGER PRIMARY KEY,
+D INTEGER);
+
+CREATE TABLE S(
+B INTEGER PRIMARY KEY,
+C INTEGER REFERENCES T(C) 
+ON DELETE CASCADE);
+
+CREATE TABLE R(
+A INTEGER PRIMARY KEY,
+B INTEGER REFERENCES S(B) 
+ON DELETE SET NULL);
+
+[T]        [S]        [R]
+C    D      B    C     A    B
+------      ------     ------
+1    1      1    1     1    1
+2    1      2    1     2    2
+
+
+
+1) (1, NULL)과 (2, 2)2) (1, NULL)과 (2, NULL)3) (2, 2)4) (1, 1)
+
+
+
+ 
+
+문제 39. 다음 보기 중 테이블 생성시 칼럼별 생성할 수 있는 제약조건(Constraints)에 대한 설명으로 가장 부적절한 것은? 정답확인🌼
+
+
+
+1) UNIQUE : 테이블 내에서 중복되는 값 이 없으면 NULL 입력이 불가능하다.2) Primary Key : 주 키로 테이블당 1개만 생성이 가능하다.3) Foreign Key : 외래키로 여러 개 생성이 가능하다.4) NOT NULL : 명시적으로 NULL 입력을 방지한다.
+
+
+
+ 
+
+문제 40. 다음 중 아래의 (1), (2), (3) 의 SQL에서 실행 결과가 같은 것은?  정답확인🌼
+(1)
+SELECT A.ID, B.ID
+FROM SQLD_40_1 A FULL OUTER JOIN
+SQLD_40_2 B
+ON A.ID = B.ID;
+
+(2)
+SELECT A.ID, B.ID
+FROM SQLD_40_1 A LEFT OUTER JOIN
+SQLD_40_2 B
+ON A.ID = B.ID
+UNION
+SELECT A.ID, B.ID
+FROM SQLD_40_1 A RIGHT OUTER JOIN
+SQLD_40_2 B
+ON A.ID = B.ID;
+
+(3)
+SELECT A.ID, B.ID
+FROM SQLD_40_1 A, SQLD_40_2 B
+WHERE A.ID = B.ID
+UNION ALL
+SELECT A.ID, NULL FROM SQLD_40_1 A
+WHERE NOT EXISTS(SELECT 1 FROM 
+                 SQLD_40_2 B 
+                 WHERE A.ID = B.ID)
+UNION ALL
+SELECT NULL, B.ID
+FROM SQLD_40_2 B
+WHERE NOT EXISTS(SELECT 1 FROM
+                 SQLD_40_1 A
+                 WHERE B.ID = A.ID);
+
+
+
+1) 1, 22) 1, 33) 2, 34) 1, 2, 3
+
+
+
+
+ 
+문제 41. 아래의 SQL로 조회되는 행 수를 구하시오.  정답확인🌼
+[SQLD_41_1]
+DEPTNO     JOB      SAL
+------------------------
+20       CLERK     800
+30       SALESMAN  1600
+30       SALESMAN  1250
+20       MANAGER   2976
+30       SALESMAN  1250
+30       MANAGER   2850
+10       MANAGER   2450
+20       ANALYST   3000
+10       PRESIDENT 5000
+30       SALESMAN  1500
+20       CLERK     1100
+30       CLERK     950
+20       ANALYST   3000
+10       CLERK     1300
+
+[SQLD_41_2]
+
+DEPTNO    DNAME
+-----------------
+10       ACCOUNTING
+20       RESEARCH
+30       SALES
+40       OPERATIONS
+SELECT DNAME, JOB,
+COUNT(*) "TOTAL EMP",
+SUM(SAL) "TOTAL SAL"
+FROM SQLD_41_1 A, SQLD_41_2 B
+WHERE A.DEPTNO = B.DEPTNO
+GROUP BY CUBE(DNAME, JOB);
+
+
+
+1) 102) 143) 184) 20
+
+
+
+ 
+
+문제 42. 다음 보기 중 Oracle 계층형 질의에 대한 설명으로 가장 부적절한 것은?   정답확인🌼
+
+
+
+1) START WITH절은 계층 구조의 시작점을 지정하는 구문이다.2) ORDER SIBLINGS BY절은 형제 노드 사이에서 정렬을 지정하는 구문이다.3) 순방향 전개란 부모 노드로부터 자식 노드 방향으로 전개하는 것을 말한다.4) 루트 노드의 LEVEL 값은 0이다.
+
+
+
+
+ 
+문제 43. 다음 보기 중 주어진 테이블에 대해서 아래의 SQL문을 수행하였을때의 결과로 가장 적절한 것은?  정답확인🌼
+[SQLD_33_43]
+EMPLOYEE_ID   NAME   DATE_OF_ENTRY   MANAGER_ID
+------------------------------------------------
+1000         강동원     2018-01-01     NULL
+1001         조인성     2018-01-01     1000
+1002         원빈      2019-01-01     1000
+1003         정우성     2019-01-01     1000
+1004         현빈      2019-01-01     NULL
+1005         장혁      2020-01-01     1004
+1006         이병헌     2020-01-01     1004
+1007         안성기     2020-01-01     1004
+
+[SQL]
+SELECT EMPLOYEE_ID, NAME, DATE_OF_ENTRY, MANAGER_ID
+FROM SQLD_33_43
+START WITH MANAGER_ID IS NULL
+CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID
+AND DATE_OF_ENTRY BETWEEN '2019-01-01'
+AND '2019-12-31'
+ORDER SIBLINGS BY EMPLOYEE_ID;
+1)
+EMPLOYEE_ID  NAME  DATE_OF_ENTRY  MANAGER_ID
+--------------------------------------------
+1000        강동원    18/01/01       NULL
+1002        원빈     19/01/01       1000
+1003        정우성    19/01/01       1000
+1004        현빈     19/01/01       NULL
+
+2)
+EMPLOYEE_ID  NAME  DATE_OF_ENTRY  MANAGER_ID
+--------------------------------------------
+1002        원빈     19/01/01       1000
+1003        정우성    19/01/01       1000
+1004        현빈     19/01/01       NULL
+
+3)
+EMPLOYEE_ID  NAME  DATE_OF_ENTRY  MANAGER_ID
+--------------------------------------------
+1000        강동원    18/01/01       NULL
+
+3)
+EMPLOYEE_ID  NAME  DATE_OF_ENTRY  MANAGER_ID
+--------------------------------------------
+1000        강동원    18/01/01       NULL
+1004        현빈     19/01/01       NULL
+1005        장혁     20/01/01       1004
+1006        이병헌    20/01/01       100
+1007        안성기    20/01/01       1004
+- - - - - - - - 주관식 - - - - - - - -
+
+문제 44. 아래의 결과가 반환되도록 주어진 SQL문의 빈칸을 완성하시오.정답확인🌼
+SELECT COL1, COL2, COL3,
+LEAD(COL3,(    ),(    )) 
+OVER(PARTITION BY COL1 ORDER BY COL3)
+AS AFTER_COL3
+FROM SQLD_33_44;
+
+[RESULT]
+COL1   COL2   COL3  AFTER_COL3
+-----------------------------
+A      가      1      10
+A      가      5      9
+A      다      10     9
+B      가      20     100
+B      가      30     9
+B      가      100    9
+C      가      50     1000
+C      가      100    9
+C      가      1000   9
+D      가      1200   9
+D      가      1400   9
+✏️
+ 
+
+문제 45. 주어진 테이블에서 아래의 SQL문을 수행하였을때 결과값이 아래의 결과와 같을때 결과의 (      )에 들어갈 값을 적으시오.
+[SQLD_33_45]
+COL1   COL2    COL3
+---------------------
+A       가       1
+A       가       5
+A       다       10
+B       가       20
+B       나       30
+B       나       100
+C       다       50
+[SQL]
+
+SELECT NTILE_2, COUNT(*) AS CNT
+FROM (
+      SELECT COL1, COL2, COL3, NTILE(3) OVER
+      (ORDER BY COL3) AS NTILE_2
+      FROM SQLD_33_45
+      )
+      WHERE 1=1
+GROUP BY NTILE_2;
+
+[RESULT]
+NTILE_2    CNT
+----------------
+(    )    (    )
+2           2
+3           2
+✏️정답확인🌼
+ 
+
+문제 46. 아래 SQL문을 수행한 결과를 적으시오.
+[SQL]
+SELECT COALESCE(NULLIF(1,1),2,3)
+FROM DUAL;
+✏️정답확인🌼
+ 
+
+문제 47. 주어진 테이블에서 날짜 값을 2020, 02로 분리하여 추출하도록 아래 SQL문의 (      )을 완성하시오. 정답확인🌼
+[SQLD_33_47]
+COL1
+--------
+2020-2-1
+
+[SQL]
+SELECT EXTRACT(YEAR FROM SYSDATE),
+LPAD(EXTRACT(month from sysdate),(     ))
+FROM SQLD_33_47;
+✏️
+ 
+
+문제 48. 아래의 보기를 만족하는 조인 기법은 무엇인가?
+- 먼저 선행 테이블의 조건을 만족하는 행을 추출하여 후행 테이블을 읽으면서 조인을 수행한다.
+- 랜덤 방식으로 엑세스 한다.
+- 결과를 가능한 빨리 화면에 보여줘야 하는 온라인 프로그램에 적당하다.
+✏️정답확인🌼
+ 
+
+문제 49. 주어진 테이블에서 아래의 SQL문을 수행하였을때의 결과를 적으시오.
+[SQLD_33_49]
+COL1   COL2   COL3
+-------------------
+A      100     50
+A      300     130
+A      400     70
+B      50      100
+C      500     500
+
+[SQL]
+SELECT SUM(CASE WHEN COL1 = 'A'
+           THEN 1 END) AS SUM1,
+       SUM(CASE WHEN COL2 < 200
+           THEN 1 END) AS SUM2
+FROM SQLD_33_49;
+✏️정답확인🌼
+ 
+
+문제 50. 주어진 테이블에서 아래의 SQL문을 수행한 결과가 RESULT와 같을때 SQL문의 빈칸을 그룹 함수를 사용하여 완성하시오.
+[SQLD_33_50]
+COL1   COL2   COL3
+------------------
+A      가      2
+A      가      4
+A      다      3
+A      다      3
+A      다      1
+B      가      10
+B      가      10
+B      나      50
+B      나      50
+B      나      30
+C      나      50
+C      나      50
+C      다      500
+C      다      500
+C      다      50
+
+[SQL]
+SELECT COL1, COL2, SUM(COL3)
+FROM SQLD_33_50
+GROUP BY(     );
+
+[RESULT]
+COL1    COL2   SUM(COL3)
+-------------------------
+A       가       6
+A       다       7
+A               13
+B       가       20
+B       나       130
+B               150
+C       나       100
+C       다       1050
+C               1150
+✏️정답확인🌼
+
+
+📝SQLD. 제 33 회 기출 문제(총 50) - 정답 / 해설
+ 
+
+1. 정답 :  Range Partition
+📖문제확인
+ 
+해설 : 파티셔닝 (테이블을 좀 더 작게 분할해서 관리하는 기법)
+
+
+
+분할 기준
+설명
+
+
+범위 분할(Range Partitioning)
+- 분할 키 값이 범위 내에 있는지 여부로 구분한다.- 예를 들어, 우편 번호를 분할 키로 수평 분할하는 경우이다.
+
+
+목록 분할(List Partitioning)
+- 값 목록에 파티션을 할당 분할 키 값을 그 목록에 비추어 파티션을 선택한다.- 예를 들어, Country라는 컬럼의 값이 Iceland, Norway, Sweden, Finland, Denmark중 하나에 있는행을 가져올때 북유럽 국가 파티션을 구축 할수 있다.
+
+
+해시 분할(Hash Partitioning)
+- 해시 함수의 값에 따라 파티션에 포함할지 여부를 결정한다.- 데이터의 관리 보다는 성능 향상에 목적을 둔다.- 예를 들어, 4개의 파티션으로 분할하는 경우 해시 함수는 0-3의 정수를 돌려준다.
+
+
+합성 분할(Composite Partitioning)
+- 분할 기준으로 여러 기법을 결합해 사용한다. 
+
+
+라운드 로빈(Round Robin)
+- 라운드로빈 분할은 파티션에 행의 고른 분포를 원할 때 사용한다.- *해시분할과 달리 분할 칼럼을 명시할 필요가 없다.- 회전하면서 새로운 행이 파티션에 할당된다. - 하나의 중앙처리장치를 임의의 프로세스가 종료될 때까지 차지하는 것이 아니라, 여러 프로세스들이 중앙처리장치를 조금씩 돌아가며 할당받아 실행되는 방식으로, 리눅스를 포함한 대부분의 시스템에서 사용하는방식이다.예: 무더운 여름, 세 명의 아이들이 하나의 아이스크림을 1/3씩 나누어 먹으려 한다. 먼저 A가 1/3을 먹고, 그 다음 B가 1/3을 먹고, 마지막으로 C가 나머지를 먹는 것보다는, 세 명이 조금씩 돌아가며 먹는 편이 모든 아이들의 갈증을 동시에 해소할 수 있을 것이다.
+
+
+
+ 
+
+2. 정답 :  2
+📖문제확인
+ 
+해설 : 속성의 특성에 따른 분류 ( 기본속성, 설계속성, 파생속성) 
+
+
+
+구분
+설명
+
+
+기본 속성
+사원이름, 직책이름, 고용일자 등 가장 일반적인 속성
+
+
+설계 속성
+업무상 필요한 데이터 외에 업무를 규칙화 하기 위해 속성을 새로 만들거나 변형하여 정의하는 속성
+
+
+파생 속성
+다른 속성에 영향을 받아 발생하는 속성, 계산된 값들이 여기에 해당 (예: 총 결제금액 등)
+
+
+
+ 
+ 
+ 
+
+3. 정답 :  2
+📖문제확인
+ 
+해설 : 속성을 엔티티 구성방식에 따라 분류 ( PK 속성, FK 속성, 일반속성 )
+ 
+ 속성의 분류 
+ 
+가. 속성의 특성에 따른 분류
+ 
+속성을 특성에 따라 분류한다면 다음과 같이 분류되어진다.
+ 
+1) 기본속성
+업무분석을 통해 정의한 속성
+(제품이름, 제조년월, 제조원가 등) 
+ 
+2) 설계속성
+원래 업무상 존재하지는 않지만 설계를 하면서 도출해내는 속성
+(001-식품용기, 002-약품용기, 003-기타용기 등)
+ 
+3) 파생속성
+다른 속성으로부터 계산이나 변형이 되어 생성되는 속성
+ 
+다른 속성에 영향을 받기 때문에 프로세스 설계 시 데이터 정합성을 유지하기 위해 유의해야 할 점이 많다.
+파생속성은 그 속성이 가지고 있는 계산방법에 대해서 반드시 어떤 엔터티에 어떤 속성에 의해 영향을 받는지 정의가 되어야 하며, 가급적 파생속성을 적게 정의하는 것이 좋다.
+(전체용기수(sum(개별용기), 용기의 총금액(sum(단가) 등)
+ 
+ 
+나. 엔터티 구성방식에 따른 분류
+ 
+ 
+속성을 엔티티 구성방식에 따라 분류한다면 다음과 같이 분류되어진다.
+ 
+엔터티를 식별할 수 있는 속성을 PK(Primary Key)속성, 다른 엔터티와의 관계에서 포함된 속성을 FK(Foreign Key)속성, 엔터티에 포함되어 있고 PK, FK에 포함되지 않은 속성을 일반속성이라 한다.
+ 
+1) PK(Primary Key) 속성
+엔터티를 식별할 수 있는 속성
+2) FK(Foreign Key) 속성 
+다른 엔터티와의 관계에서 포함된 속성
+3) 일반속성 
+PK, FK에 포함되지 않은 속성
+ 
+  
+또한 속성의 세부 의미를 더 쪼갤 수 있는지의 여부에 따라 분류할 수 있다. 
+ 
+1) 단순 속성(Simple Attribute)
+더 이상 다른 속성들로 쪼갤 수 없는 단순한 속성
+(나이, 성별)
+ 
+2) 복합 속성(Composite Attribute)
+여러 세부 속성들로 쪼갤 수 있는 속성
+(주소 - 시, 구, 동, 번지 등으로 쪼개질 수 있다)
+ 
+하나의 속성 안에 동일한 성질의 여러 개의 값이 존재 할 수 있는가의 여부에 따라 분류 할 수도 있다.
+(가질 수 있는 속성이 1:1로 하나뿐이냐, 1:N으로 여러개가 존재 할 수 있느냐의 여부)
+ 
+1) 단일값 속성(Single-Valued Attribute)
+속성 하나에 한 개의 값을 가지는 경우
+(모국, 주민등록번호)
+ 
+2) 다중값 속성(Multi-Valued Attribute)
+속성 하나에 여러 개의 값을 가지는 경우
+(전화번호, 컴퓨터공학과 교수명)
+ 
+다중값 속성의 경우 하나의 엔터티에 포함될 수 없으므로 1차 정규화를 하거나, 아니면 별도의 엔터티를 만들어 관계로 연결해야 한다.
+ 
+ 
+ 
+ 
+
+4. 정답 :  2
+📖문제확인
+ 
+해설 : I/E 표기법 (Information Engineering Notation)
+ 
+
+
+ 
+5. 정답 :  4
+📖문제확인
+ 
+해설 :
+
+
+
+식별자 관계
+비식별자 관계
+
+
+부모 엔티티로부터 속성을 받아 자식엔티티의 주식별자로 사용하는 경우
+부모 엔티티로부터 속성을 받았지만 자식엔티티의 주식별자로 사용하지 않고, 일반적인 속성(즉, 일반 속성 외부식별자)으로 사용하는 경우
+
+
+식별자 관계에서 Null값이 오면 안되므로 반드시 부모엔티티가 생성되어야 자기 자신의 엔티티가 생성됨
+약한 종속 관계로 자식 주식별자 구성을 독립적으로 구성
+
+
+부모로부터 받은 속성을 자식엔티티가 모두 사용하고 그것만을 주식별자로 사용한다면 부모엔티티와 자식엔티티의 1:1 관계
+상속받은 주식별자속성을 타 엔티티에 차단 필요
+
+
+부모로부터 받은 속성 이외에, 다른 부모로 부터 받은 속성을 포함하거나 스스로 가지고 있는 속성과 함께 주식별자로 구성되는 경우는 1:M 관계
+부모쪽의 관계참여가 선택관계
+
+
+식별자 관계로만 관계를 구성하면 조인조건의 개수가 많아지기 때문에, 개발자 복잡성과 오류가능성을 유발시킬수 있는 요인이 될 수 있다.
+비식별자 관계로만 관계를 구성하면 많은 조인이 걸리게 되고, 그에 따라 복잡성이 증가하고 성능이 저하되는 문제가 생길 수 있다.
+
+
+실선으로 표현
+점선으로 표현
+
+
+
+ 
+
+6. 정답 :  4
+📖문제확인
+ 
+해설 : 3차 정규화 → 한 엔티티 안의 모든 주식별자가 아닌 속성들은 주식별자에 의존해야 한다. 속성에 종속적인(이전종속) 속성이 있다면 분리해야 한다. 
+ 
+ 
+ 
+
+7. 정답 :  4
+📖문제확인
+ 
+해설 : 계약은 계약 그룹에 속하거나 or 속하지 않을수 있다.
+O = or (있을수도 있고 or 없을수도 있다.)
+
+
+8. 정답 :  3
+📖문제확인
+ 
+해설 : Range 파티션은 주로 날짜를 기준으로 데이터가 균등하게 나누어져서 비슷한 성능 개선을 보장한다. 또한 보관 주기에 따라서 필요치 않는 데이터도 쉽게 지우고 관리할 수 있다.
+
+ 
+9. 정답 :  2
+📖문제확인
+ 
+해설 : 슈퍼/서브타입  데이터의 특징은 공통점과 차이점을 고려하여 효과적으로 표현할 수 있다는 것이다.
+즉, 공통의 부분을 슈퍼타입으로 모델링하고 공통으로부터 상속받아 다른 엔터티와 차이가 있는 속성에 대해서는 별도의 서브엔터티로 구분하여 업무의 모습을 정확하게 표현하면서 물리적인 데이터 모델로 변환을 할 때 선택의 폭을 넓힐 수 있는 장점이 있다.
+슈퍼/서브 타입 관계의 변환
+ 
+데이터량이 소량일 경우 성능에 영향을 미치지 않기 때문에 데이터처리의 유연성을 고려하여 1:1 관계를 유지한다.
+그러나 데이터용량이 많아지는 경우 그리고 해당 업무적인 특징이 성능에 민감한 경우는 트랜잭션이 해당 테이블에 어떻게 발생되는지에 따라 3가지 변환방법을 참조하여 상황에 맞게 변환하도록 해야 한다.
+ 
+슈퍼/서브타입 데이터 모델의 변환
+ 
+
+10. 정답 :  1
+📖문제확인
+ 
+해설 : 반정규화란? (DB의 성능 향상을 위해 데이터 중복을 허용하고 조인을 줄이는 것으로, 반정규화를 통해 조회 성능은 좋아지지만 데이터 모델의 유연성은 낮아지며 데이터 무결성이 깨질 위험이 있다.)
+반정규화의 기법
+
+테이블 반정규화: 테이블 병합/분할/추가
+칼럼 반정규화: 중복칼럼 추가/파생칼럼 추가/이력테이블 칼럼추가/PK에 의한 칼럼 추가 등
+관계 반정규화: 중복관계 추가
+
+*테이블과 칼럼의 반정규화는 데이터 무결성에 영향을 미치지만 관계의 반정규화는 데이터 무결성을 깨뜨릴 위험없이 데이터처리의 성능을 향상시킬 수 있다.
+ 
+
+11. 정답 :  1
+📖문제확인
+ 
+해설 :해설 :
+서브쿼리란 하나의 SQL문 안에 포함되어 있는 도 다른 SQL문을 말한다.
+서브쿼리는 메인쿼리의 컬럼을 모두 사용할 수 있지만, 메인쿼리는 서브쿼리의 컬럼을 사용할 수 없다.
+질의 결과에 서브쿼리 컬럼을 표시해야 한다면 조인 방식으로 변환하거나 함수, 스칼라 서브쿼리 등을 사용해야 한다.
+ 
+서브쿼리 사용시 주의사항1. 서브쿼리를 괄호로 감싸서 사용한다.2. 서브쿼리는 단일행(Single row) 또는 복수행 (Multiple row)비교 연산자와 함께 사용 가능하다. 단일행 비교 연산자는 서브쿼리의 결과가 반드시 1건 이하여야 하고 복수행 비교 연산자는 서브커리의 결과 건수와 상관없다.
+ 
+
+12. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+13. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+14. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+15. 정답 :  3
+📖문제확인
+ 
+해설 :
+ 
+
+16. 정답 :  1
+📖문제확인
+ 
+해설 : 
+ 
+
+17. 정답 :  3
+📖문제확인
+ 
+해설 :
+ 
+
+18. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+19. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+
+20. 정답 :  1
+📖문제확인
+ 
+해설 : 
+ 
+
+21. 정답 :  4
+📖문제확인
+ 
+해설 : 
+
+
+ROWS |  RANGE BETWEEN
+UNBOUNDED PRECEDING | CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING
+AND
+UNBOUNDED FOLLOWING | CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING
+
+ROWS : 물리적인 ROW 단위로 행 집합을 지정 ( 현재행을 기준으로 몇개의 행을 포함하는지 )
+RANGE : 논리적인 상대번지로 행 집합을 지정 ( 현재행을 기준으로 어떤 값의 범위를 포함하는지 )
+BETWEEN ~ AND 절 : 윈도우의 시작과 끝 위치를 지정
+UNBOUNDED PRECEDING : PARTITION의 첫 번째 로우에서 윈도우가 시작
+UNBOUNDED FOLLOWING : PARTITION의 마지막 로우에서 윈도우가 시작
+CURRENT ROW : 윈도우의 시작이나 끝 위치가 현재 로우
+
+
+
+ 
+
+22. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+23. 정답 :  2
+📖문제확인
+ 
+해설 : 1 PRECEDING / 1 FOLLOWING - 현재행을 기준으로 이전행+현재+다음행 합계를 표시
+
+ 
+- ROWS : 물리적인 ROW 단위로 행 집합을 지정한다.(현재 행의 앞 뒤 건수)
+- RANGE : 현재 행의 데이터 값을 기준으로 앞 뒤 데이터 값의 범위를 표시한다.
+- BETWEEN ~ AND 절 : 윈도우의 시작과 끝 위치를 지정한다.
+- UNBOUNDED PRECEDING : PARTITION의 첫 번째 로우에서 윈도우가 시작한다.
+- UNBOUNDED FOLLOWING : PARTITION의 마지막 로우에서 윈도우가 시작한다.
+- CURRENT ROW : 윈도우의 시작이나 끝 위치가 현재 로우 이다.
+
+👩🏻‍💻윈도우 함수(WINDOW FUNCTION) 란? 
+
+- 행과 행간의 관계를 쉽게 정의하기 위해 만든 함수
+- 윈도우절을 사용하면 PARTITION BY 절에 명시된 그룹을 좀 더 세부적으로 그룹화 할수있다.
+[ 작성법 예제 ]
+SELECT SUM(SAL)
+       OVER -- 필수 키워드
+       ([PARTITION BY 칼럼] -- 그룹 컬럼명
+          [ORDER BY 절] -- 정렬 컬럼명
+          [WINDOWING 절])FROM 테이블 명;
+ 
+- WINDOW_FUNCTION
+기존에 사용하던 함수도 있고, 분석함수중에서 일부(AVG, COUNT, SUM, MAX, MIN)만 사용 할 수 있다.
+- ARGUMENTS (인수)
+기존에 사용하던 함수도 있고,
+- PARTITION BY 절
+ 전체 집합을 기준에 의해 소그룹으로 나눌 수 있다.(세부적으로 그룹핑)
+- ORDER BY 절
+어떤 항목에 대해 순위를 지정할지에 대해 기술한다.
+- WINDOWING 절 
+함수의 대상이 되는 행 기준의 범위를 강력하게 지정한다. ( 오라클 지원 )
+ROWS  → 현재 행의 앞 뒤 건수를 의미 (물리적)
+RANGE → 현재 행의 데이터 값을 기준으로 앞 뒤 데이터 값의 범위를 표시 (논리적)
+ROWS, RANGE 중 하나를 선택하여 사용한다.
+--[BETWEEN TYPE]
+ROWS | RANGE BETWEEN
+UNBOUNDED PRECEDING | 
+CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING 
+AND
+UNBOUNDED FOLLOWING |
+CURRENT ROW | VALUE_EXPR PRECEDING/FOLLOWING
+
+--[NOT BETWEEN]
+ROWS | RANGE
+UNBOUNDED PRECEDING |
+CURRENT ROW | VALUE_EXPR PRECEDING
+
+--[DEFAULT]
+RANGE BETWEEN UNBOUNDED PRECEDING
+AND
+CURRENT ROW
+
+-- UNBOUNDED : 한계를 두지 않고, 해당 파티션의 끝까지를 의미
+-- PRECEDING : 현재행에서 이전 행을 나타낸다.
+-- FOLLOWING : 현재행에서 다음 행을 나타낸다. (BETWEEN ~ AND ~ 형식으로 작성함)
+[RANGE, ROWS에서 사용하는 UNBOUNDED PRECEDING, CURRENT ROW, UNBOUNDED FOLLOWING ]
+1. UNBOUNDED PRECEDING / UNBOUNDED FOLLOWING 
+- 처음행부터 마지막행 결과까지 계산한 합계를 표시해줍니다 2. UNBOUNDED PRECEDING / CURRENT ROW
+- 처음행부터 현재행 결과까지 계산한 합계를 표시해줍니다 3. CURRENT ROW / UNBOUNDED FOLLOWING
+- 현재행부터 마지막행 결과까지 계산한 합계를 표시해줍니다 4. 1 PRECEDING / 1 FOLLOWING
+- 현재행에 이전행+본인+다음행 합계를 표시해줍니다
+ 
+💡알아두기
+그룹 내 행 순서 함수
+ 
+FIRST_VALUE -  가장 먼저 나온 값, MIN 함수와 같다
+LAST_VALUE - 가장 나중에 나온 값, MAX 함수와 같다
+ 
+LAG : 이전 값
+- LAG(SAL, 2, 0)
+첫번째 : 대상 컬럼명
+두번째 : 몇 번째 이전 행을 가져올 건지 결정(DEFAULT는 1)
+세번째 : NULL의 경우 다른 값으로 바꿔준다(NVL, ISNULL과 같음)
+ 
+LEAD : 다음 값
+- LEAD(SAL, 2, 0)
+첫번째 : 대상 컬럼명
+두번째 : 몇 번째 다음 행을 가져올 건지 결정(DEFAULT는 1)
+세번째 : NULL의 경우 다른 값으로 바꿔준다(NVL, ISNULL과 같음)
+ 
+RATIO_TO_REPORT - 파티션 내 전체 SUM()값에 대한 행별 칼럼 값의 백분율을 소수점으로 구한다.
+PERCENT_RANK - 먼저나오는것을 0, 가장 나중에 나오는 것을 1로 하여 값이 아닌 행의 순서별 백분율을 구한다.
+CUME_DIST - 파티션별 윈도우의 전체건수에서 현재 행보다 작거나 같은 건수에 대한 누적 백분율을 구한다.
+NTILE - 파티션별 전체 건수를 ARGUMENT 값으로 N등분한 결과를 구한다.(예: 수능등급)
+ 
+
+
+ 
+
+24. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+25. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+26. 정답 :  1
+📖문제확인
+ 
+해설 : 
+ 
+
+27. 정답 :  3
+📖문제확인
+ 
+해설 : 
+롤(Role)
+- 사용자에게 허가할 수 있는 권한들의 집합 
+- 롤을 이용하면 권한 부여와 회수를 쉽게 할 수 있다.
+- 롤은 CREATE ROLE 권한을 가진 USER 에 의해서 생성된다.
+- 한 사용자가 여러개의 ROLE을 ACCESS 할 수 있고, 여러 사용자에게 같은 ROLE 을 부여할 수 있다.
+- 시스템 권한을 부여 & 취소할 때와 동일한 명령을 사용하여 사용자에게 부여하고 취소한다.
+- 사용자는 ROLE에 ROLE을 부여할 수 있다.
+- Oracle DB를 설치하면 기본적으로 CONNECT, RESOURCE, DBA ROLE이 제공된다.
+ 
+
+-- 1. ROLE 생성하기
+SQL> CREATE ROLE manager;
+
+-- 2. ROLE에 권한 부여하기
+SQL> GRANT CREATE SESSION, CREATE TABLE TO manager;
+
+-- 3. 권한이 부여된 ROLE을 USER 나 ROLE 에 부여하기
+SQL> GRANT manager TO scott, test; // 여기서는 scott, test 라는 유저에 부여함.
+ 
+
+28. 정답 :  1
+📖문제확인
+ 
+해설 : 비절차적 데이터 조작어(DML)는 사용자가 무슨 데이터를 원하는지만 명세한다.
+ 
+데이터 조작어
+- 절차적 데이터 조작어(procedural DML) : 사용자가 어떤 데이터를 원하고 해당 데이터를 얻으려면 어떻게 처리해야 하는지 명세함- 비절차적 데이터 조작어(nonprocedural DML) : 사용자가 어떤 데이터를 원하는지만 명세함- 호스트 프로그램 속에 삽입되어 사용되는 DML명령어들을 데이터 부속어(Data Sub Language)라고 한다.
+
+
+
+명령어의 종류
+명령어
+설명
+
+
+데이터 조작어(DML : Data Manipulation Language)
+SELECT
+데이터베이스에 들어 있는 데이터를 조회하거나 검색하기 위한 명령어를 말하는 것으로 RETRIEVE 라고도 한다.
+
+
+INSERTUPDATEDELETE
+데이터베이스의 테이블에 들어 있는 데이터에 변형을 가하는 종류의 명령어들을 말한다. 예를 들어 테이블에 새로운 행을 집어넣거나, 원하지 않는 데이터를 삭제하거나 수정하는 것들의 명령어들을 DML이라고 부른다.
+
+
+데이터 정의어(DDL : Data Definition Language)
+CREATEALTERDROPRENAME
+테이블과 같은 데이터 구조를 정의하는 명령어들로 구조를 생성, 변경, 삭제 및 이름을 바꾸는 데이터 구조와 관련된 명령어들을 DDL이라고 부른다.
+
+
+데이터 제어어(DCL : Data Control
+GRANTREVOKE
+데이터베이스에 접근하고 객체들을 사용하도록 권한을 주고 회수하는 명령어를 DCL이라고 부른다.
+
+
+트랜잭션 제어어(TCL : Transaction Control Language
+COMMITROLLBACK
+논리적인 작업의 단위를 묶어서 DML에 의해 조작된 결과를 작업단위(트랜잭션) 별로 제어하는 명령어를 말한다.
+
+
+
+ 
+ 
+
+29. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+
+30. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+31. 정답 :  1
+📖문제확인
+ 
+해설 :
+ 
+
+32. 정답 :  3
+📖문제확인
+ 
+해설 : 
+
+ 
+
+33. 정답 :  3
+📖문제확인
+ 
+해설 : 
+ 
+
+34. 정답 :  1
+📖문제확인
+ 
+해설 :
+ 
+
+35. 정답 :  1
+📖문제확인
+ 
+해설 : 
+SQL> SELECT B. *FROM EMP_A A, EMP_B B  WHERE A.ENO = B.ENO AND B.SALARY >= ANY A.SALARY;
+
+ENO	   MNO     SALARY
+------------------------
+B1	   C1      2000
+B3	   C3      10000
+B5	   C5      6000
+ 
+
+36. 정답 :  1, 4
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+37. 정답 :  4
+📖문제확인
+ 
+해설 : 
+
+ 
+38. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+
+39. 정답 :  1
+📖문제확인
+ 
+해설 :  
+ 
+ 
+
+40. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+
+41. 정답 :  3
+📖문제확인
+ 
+해설 : CUBE 함수는 계산 가능한 모든 소계와 합계를 반환한다.
+SQL> SELECT DNAME, JOB, COUNT(*) "TOTAL EMP", SUM(SAL) "TOTAL SAL" FROM SQLD_41_1 A, SQLD_41_2 B WHERE A.DEPTNO = B.DEPTNO GROUP BY CUBE(DNAME, JOB);
+
+DNAME	   JOB	       TOTAL EMP  TOTAL SAL
+---------- ---------- ---------- ----------
+			      14      29026
+	   clerk	       4       4150
+	   analyst	       2       6000
+	   manager	       3       8276
+	   salesman	       4       5600
+	   president	       1       5000
+sales			       6       9400
+sales	   clerk	       1	950
+sales	   manager	       1       2850
+sales	   salesman	       4       5600
+research		       5      10876
+research   clerk	       2       1900
+research   analyst	       2       6000
+research   manager	       1       2976
+accounting		       3       8750
+accounting clerk	       1       1300
+accounting manager	       1       2450
+accounting president	       1       5000
+
+18 rows selected.
+ 
+ 
+
+42. 정답 :  4
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+43. 정답 : 1
+📖문제확인
+ 
+해설 : 
+
+ 
+- - - - - - - - 주관식 - - - - - - - -
+ 
+44. 정답 :  2, 9
+📖문제확인
+ 
+해설 : 
+ 
+
+45. 정답 :  1, 3
+📖문제확인
+ 
+해설 : 
+
+
+NTILE 함수란? 행 데이터를 그룹별로 나누어 차례대로 행 번호를 부여하는 분석 함수입니다.
+
+[구문 형식]
+SELECT NTILE([그룹으로 나눌 정수]) OVER (PARTITION BY [컬럼1] ORDER BY [컬럼2])
+
+[특징]
+1.전체 행 데이터 수를 그룹으로 나누었을 때 나머지가 존재하면 첫 번째 그룹부터 나머지가 안남을 때까지 1씩 부여합니다.
+(예 : 전체행이 12개고 그룹이 5일 때 12를 5로 나눈 나머지가 2이므로 1~5번 그룹에 2행을 부여하고 1,2번 그룹에 1행씩 추가 부여함.)
+2.PARTITION BY를 생략하면 전체 행에 대해서 그룹화가 수행됩니다. 반대로 PARTITION BY를 지정하면 해당 파티션 내에서 그룹화를 진행하여 행 번호를 부여합니다.
+ 
+
+46. 정답 :  2
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+47. 정답 :  2, '0'
+📖문제확인
+ 
+해설 : 
+ 
+
+48. 정답 :  Nested Loop Join
+📖문제확인
+ 
+해설 :
+ 
+
+49. 정답 :  3, 2
+📖문제확인
+ 
+해설 : 
+ 
+ 
+
+50. 정답 :  GROUPING SETS(COL1, (COL1, COL2))
+📖문제확인
+ 
+해설 : 
+ 
+ 
