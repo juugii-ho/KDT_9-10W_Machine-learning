@@ -450,7 +450,7 @@ from sklearn.model_selection import RandomizedSearchCV
 # 데이터 불러오기
 df = pd.read_csv('data/iris.csv')
 
-df =
+# df =
 
 # 결측치 및 이상치 확인
 missing_value_and_outlier_detection(df)
